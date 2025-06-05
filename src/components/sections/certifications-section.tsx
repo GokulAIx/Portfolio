@@ -11,7 +11,7 @@ const certifications = [
 
 const CertificationsSection = () => {
   return (
-    <SectionContainer id="certifications" title="Certifications">
+    <SectionContainer id="certifications" title="Certifications" className="dark">
       <Card className="shadow-lg">
         <CardContent className="p-6">
           <ul className="space-y-4">
