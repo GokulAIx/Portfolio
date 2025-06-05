@@ -22,16 +22,16 @@ const Navbar = () => {
       <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#home" className="flex items-center">
           <Image
-            src="/Logo.png" 
+            src="/Logo.png"
             alt="Logo"
-            width={100} 
-            height={34} 
-            className="rounded-sm" 
-            style={{ objectFit: 'contain' }}
+            width={90} // Further reduced width
+            height={30} // Further reduced height
+            className="rounded-sm"
+            style={{ objectFit: 'contain' }} // Ensures the image scales within the dimensions
             priority
           />
         </Link>
-        
+
         <nav className="hidden md:flex gap-1">
           {navItems.map((item) => (
             <Button key={item.label} variant="ghost" asChild>
