@@ -15,7 +15,7 @@ const projectsData = [
     title: "SkillCheck – AI Skill Evaluator",
     description: "Developed SkillCheck, a Flask-based web application utilizing Groq API to evaluate user skills and improving learning outcomes. Integrated a Large Language Model (LLM) via Groq API, providing personalized AI-driven feedback, enabling learners to optimize their study approach 100% of the time. Used Flask for backend, Pandas for data preprocessing, Groq API for LLM integration.",
     tools: ["Flask", "Groq API", "LLM", "Python"],
-    imageUrl: "/skillcheck-project-image.png", // <-- Updated image URL
+    imageUrl: "/SkillCheck.png", // <-- Updated image URL
     imageHint: "skills assessment",
     githubLink: "https://github.com/Gokul-sc/SkillCheck",
   },
