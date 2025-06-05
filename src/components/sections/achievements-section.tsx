@@ -8,9 +8,6 @@ const achievements = [
   { text: "Competed in national-level events like IIT Kanpur’s Techkriti (Maneuver Bot, Astro Quiz) and ISRO’s Bharatiya Antariksh Hackathon (Lunar Crater Locator), among 50+ teams.", icon: <Zap className="w-5 h-5 text-primary mr-3" /> },
   { text: "Secured 2 nd place in the hackathon CODEX (for my SkillCheck Project) conducted by Young Compete.", icon: <Award className="w-5 h-5 text-primary mr-3" /> },
   { text: "Member of Art of Living’s YES+ Group since 1st year of college.", icon: <Users className="w-5 h-5 text-primary mr-3" /> },
-  { text: "Participated in various coding competitions and workshops to enhance problem-solving skills and stay updated with industry trends.", icon: <Zap className="w-5 h-5 text-primary mr-3" /> },
-  { text: "Contributed to open-source projects focusing on NLP and data science, gaining experience in collaborative development.", icon: <Users className="w-5 h-5 text-primary mr-3" /> },
-  { text: "Presented a project on 'Automated Fake News Detection using Transformer Models' at a university tech symposium, receiving positive feedback.", icon: <Award className="w-5 h-5 text-primary mr-3" /> },
 ];
 
 const AchievementsSection = () => {
