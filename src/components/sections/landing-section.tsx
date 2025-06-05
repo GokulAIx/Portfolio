@@ -41,8 +41,11 @@ const LandingSection = () => {
               <span>⚡ ML/NLP Engineer in Progress</span>
             </p>
           </div>
-          <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-md">
+          <p className="text-base sm:text-lg text-muted-foreground mb-6 max-w-md">
             The Mind Behind The Model.
+          </p>
+          <p className="text-sm font-semibold text-foreground/80 mb-2">
+            My Socials
           </p>
           <div className="flex gap-4">
             <Button variant="outline" size="icon" asChild>
