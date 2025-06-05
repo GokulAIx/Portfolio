@@ -22,11 +22,11 @@ const CertificationsSection = () => {
                   <span className="font-medium">{cert.name}</span>
                   <span className="text-muted-foreground text-sm"> - {' '}
                     {cert.link ? (
-                      <Link href={cert.link} target="_blank" rel="noopener noreferrer" className="font-medium hover:underline text-primary-foreground">
+                      <Link href={cert.link} target="_blank" rel="noopener noreferrer" className="font-medium underline text-primary-foreground">
                         {cert.issuerLogo}
                       </Link>
                     ) : (
-                      cert.issuerLogo
+                      <span className="font-medium underline text-primary">{cert.issuerLogo}</span>
                     )}
                   </span>
                 </span>
