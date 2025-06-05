@@ -13,8 +13,12 @@ export const metadata: Metadata = {
   title: 'Gokul.AI - Personal Portfolio',
   description: 'Personal portfolio of Gokul Sree Chandra, an AI/ML and NLP enthusiast.',
   icons: {
-    icon: '/GokulAIx.png', // Path relative to the public folder
-    apple: '/GokulAIx.png', // For Apple devices
+    icon: [
+      { url: '/GokulAIx.png', href: '/GokulAIx.png', type: 'image/png', sizes: 'any' }
+    ],
+    apple: [
+      { url: '/GokulAIx.png', href: '/GokulAIx.png', type: 'image/png' }
+    ],
   },
 };
 
@@ -26,9 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} dark`}>
       <head>
-        {/* Favicon links are now handled by the metadata.icons object above */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Favicon links are primarily handled by the metadata.icons object */}
       </head>
       <body className="font-body antialiased">
         {children}
