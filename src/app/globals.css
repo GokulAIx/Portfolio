@@ -77,7 +77,7 @@ body {
     --secondary-foreground: 210 40% 94%;
 
     --muted: 222 40% 20%;
-    --muted-foreground: 210 30% 70%;
+    --muted-foreground: 210 30% 85%; /* Increased lightness from 70% for better readability */
 
     --accent: 270 30% 70%; /* Slightly darker but still pale violet */
     --accent-nebula: 270 30% 70% / 0.05; /* Very subtle pale violet for nebula effect */

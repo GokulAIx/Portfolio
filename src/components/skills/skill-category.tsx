@@ -18,7 +18,7 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills, icon }) =>
       <CardContent>
         <div className="flex flex-wrap gap-2">
           {skills.map((skill) => (
-            <Badge key={skill} variant="secondary" className="text-sm px-3 py-1 bg-accent/50 text-accent-foreground/80 hover:bg-accent/70">
+            <Badge key={skill} variant="secondary" className="text-sm px-3 py-1 bg-accent/50 text-foreground hover:bg-accent/70">
               {skill}
             </Badge>
           ))}

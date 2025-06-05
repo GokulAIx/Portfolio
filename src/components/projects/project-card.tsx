@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
           <h4 className="text-xs font-semibold uppercase text-muted-foreground mb-2">Tech Used:</h4>
           <div className="flex flex-wrap gap-2">
             {tools.map((tool) => (
-              <Badge key={tool} variant="secondary" className="px-2 py-0.5 bg-accent/50 text-accent-foreground/80">
+              <Badge key={tool} variant="secondary" className="px-2 py-0.5 bg-accent/50 text-foreground hover:bg-accent/70">
                 {tool}
               </Badge>
             ))}
