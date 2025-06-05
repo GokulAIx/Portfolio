@@ -20,16 +20,27 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="#home" className="flex items-center">
-          {/* Wrapper div to strictly control the logo's rendered area and aspect ratio */}
-          <div className="relative w-[144px] h-[48px]"> {/* Adjusted for a larger, fixed size */}
+        <Link href="#home" className="flex items-center gap-x-2"> {/* Added gap-x-2 */}
+          {/* Wrapper div for Logo.png */}
+          <div className="relative w-[144px] h-[48px]">
             <Image
               src="/Logo.png"
               alt="Logo"
-              fill // Image will fill this parent div
-              className="object-contain rounded-sm" // Ensures image scales within bounds, maintaining aspect ratio
+              fill 
+              className="object-contain rounded-sm" 
               priority
-              sizes="(max-width: 768px) 144px, 144px" // Provides a hint to Next.js for image optimization
+              sizes="(max-width: 768px) 144px, 144px" 
+            />
+          </div>
+          {/* Wrapper div for Brand.png */}
+          <div className="relative w-[150px] h-[48px]">
+            <Image
+              src="/Brand.png"
+              alt="Brand Name"
+              fill
+              className="object-contain rounded-sm"
+              sizes="(max-width: 768px) 150px, 150px"
+              data-ai-hint="brand text"
             />
           </div>
         </Link>
