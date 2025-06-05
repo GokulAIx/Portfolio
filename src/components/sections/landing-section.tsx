@@ -30,7 +30,7 @@ const LandingSection = () => {
             </p>
           </div>
           <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-md">
-            Turning data into intelligent systems. Always learning, always building.
+            The Mind Behind The Model.
           </p>
           <div className="flex gap-4">
             <Button variant="outline" size="icon" asChild>
