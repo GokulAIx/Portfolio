@@ -27,7 +27,7 @@ const skillsData = {
 
 const SkillsSection = () => {
   return (
-    <SectionContainer id="skills" title="My Skills">
+    <SectionContainer id="skills" title="My Skills" titleClassName="text-primary">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         <SkillCategory title={skillsData.languages.title} skills={skillsData.languages.items} icon={skillsData.languages.icon} />
         <SkillCategory title={skillsData.frameworks.title} skills={skillsData.frameworks.items} icon={skillsData.frameworks.icon} />
