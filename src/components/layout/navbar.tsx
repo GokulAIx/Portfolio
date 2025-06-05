@@ -22,7 +22,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 left-0 right-0">
       <div className="flex h-16 items-center px-0 sm:mx-auto sm:container sm:px-4 md:max-w-5xl lg:px-6 relative">
         
-        <Link href="#home" className=""> {/* Removed flex items-center */}
+        <Link href="#home" className="block"> {/* Explicitly set display: block */}
           <div className="relative w-[144px] h-[48px]">
             <Image
               src="/Logo.png"
