@@ -19,9 +19,8 @@ const navItems = [
 const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      {/* Removed justify-between from this div */}
       <div className="container mx-auto flex h-16 max-w-5xl items-center px-2 sm:px-4 lg:px-6">
-        <Link href="#home" className="flex items-center gap-x-2">
+        <Link href="#home" className="flex items-center gap-x-1"> {/* Reduced gap from gap-x-2 */}
           {/* Wrapper div for Logo.png */}
           <div className="relative w-[144px] h-[48px]">
             <Image
@@ -46,8 +45,8 @@ const Navbar = () => {
           </div>
         </Link>
 
-        {/* Changed ml-6 to ml-2 to move desktop nav closer to logo */}
-        <nav className="hidden md:flex gap-1 ml-2">
+        {/* Added flex-nowrap and overflow-x-auto for horizontal scrolling */}
+        <nav className="hidden md:flex flex-nowrap overflow-x-auto gap-1 ml-2">
           {navItems.map((item) => (
             <Button key={item.label} variant="ghost" asChild>
               <Link href={item.href}>{item.label}</Link>
@@ -55,8 +54,7 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* This div with ml-auto will push itself (and its content) to the far right */}
-        <div className="ml-auto">
+        <div className="ml-auto"> 
           <div className="md:hidden"> {/* Mobile menu trigger */}
             <Sheet>
               <SheetTrigger asChild>
