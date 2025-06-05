@@ -20,12 +20,21 @@ export interface ContactFormState {
   success?: boolean;
 }
 
-const RECIPIENT_EMAIL = "polavarapugokul@gmail.com";
+// Read recipient email from environment variable
+const RECIPIENT_EMAIL = process.env.CONTACT_FORM_RECIPIENT_EMAIL;
 
 export async function submitContactFormAction(
   prevState: ContactFormState | undefined,
   formData: FormData
 ): Promise<ContactFormState> {
+  if (!RECIPIENT_EMAIL) {
+    console.error("CONTACT_FORM_RECIPIENT_EMAIL environment variable is not set. Please ensure it's defined in your .env file.");
+    return {
+      error: "The contact form is currently not configured to send messages. Please contact the site administrator.",
+      success: false,
+    };
+  }
+
   const rawFormData = {
     name: formData.get('name') as string,
     email: formData.get('email') as string,
@@ -47,9 +56,9 @@ export async function submitContactFormAction(
   //
   // Example (conceptual - would require installing and configuring an email library):
   // try {
-  //   const emailClient = new EmailClient({ apiKey: process.env.EMAIL_API_KEY });
+  //   const emailClient = new EmailClient({ apiKey: process.env.EMAIL_API_KEY }); // Ensure EMAIL_API_KEY is in .env
   //   await emailClient.send({
-  //     from: 'Your Portfolio <noreply@yourdomain.com>',
+  //     from: 'Your Portfolio <noreply@yourdomain.com>', // Or use a verified sender from your email service
   //     to: RECIPIENT_EMAIL,
   //     reply_to: validatedFields.data.email,
   //     subject: `New Contact Form Submission from ${validatedFields.data.name}`,
@@ -66,12 +75,12 @@ export async function submitContactFormAction(
   //   };
   // }
 
-  console.log("Contact form submission received:");
+  console.log("Contact form submission received (simulation):");
   console.log("Intended Recipient:", RECIPIENT_EMAIL);
   console.log("Sender Name:", validatedFields.data.name);
   console.log("Sender Email:", validatedFields.data.email);
   console.log("Message:", validatedFields.data.message);
-  console.log("--- This is a simulation. In a real app, an email would be sent. ---");
+  console.log("--- This is a simulation. In a real app, an email would be sent via an integrated service. ---");
 
 
   // Simulate successful submission for now
