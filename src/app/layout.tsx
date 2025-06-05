@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
@@ -25,10 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} dark`}>
       <head>
-        {/* Keep existing preconnect links if any, or remove if using next/font exclusively */}
+        {/* Explicit link tags for favicon */}
+        <link rel="icon" href="/GokulAIx.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/GokulAIx.png" />
+        
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Link for Inter font is handled by next/font, so no explicit <link> needed here unless for other fonts */}
       </head>
       <body className="font-body antialiased">
         {children}
