@@ -80,6 +80,7 @@ body {
     --muted-foreground: 210 30% 70%;
 
     --accent: 270 30% 70%; /* Slightly darker but still pale violet */
+    --accent-nebula: 270 30% 70% / 0.1; /* Subtle pale violet for nebula effect */
     --accent-foreground: 270 30% 20%; /* Darker violet text */
 
     --destructive: 0 62.8% 30.6%;
@@ -113,6 +114,9 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground; /* Default for light mode */
+  }
+  html.dark body { /* Applies when html has .dark class */
+    @apply bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--accent-nebula))] to-[hsl(var(--background))] text-foreground;
   }
 }
