@@ -20,7 +20,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
       <CardHeader>
         <div className="relative w-full h-48 mb-4 rounded-t-md overflow-hidden">
-          <Image src={imageUrl} alt={title} layout="fill" objectFit="cover" data-ai-hint={imageHint}/>
+          <Image
+            src={imageUrl}
+            alt={title}
+            fill={true}
+            style={{ objectFit: 'cover' }}
+            data-ai-hint={imageHint}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Provide sizes for responsive images with fill
+          />
         </div>
         <CardTitle className="text-xl font-semibold font-headline">{title}</CardTitle>
         <CardDescription className="text-sm text-muted-foreground min-h-[3rem]">{description}</CardDescription>

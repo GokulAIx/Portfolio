@@ -13,9 +13,10 @@ const LandingSection = () => {
             <Image
               src="https://placehold.co/300x300.png"
               alt="Gokul Sree Chandra"
-              layout="fill"
-              objectFit="cover"
+              fill={true}
+              style={{ objectFit: 'cover' }}
               data-ai-hint="profile person"
+              priority // Good to add for LCP images
             />
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-3 font-headline">
@@ -52,11 +53,11 @@ const LandingSection = () => {
           </div>
         </div>
         <div className="hidden md:flex justify-center">
-          <Image 
-            src="https://placehold.co/500x500.png" 
-            alt="Abstract AI art" 
-            width={400} 
-            height={400} 
+          <Image
+            src="https://placehold.co/500x500.png"
+            alt="Abstract AI art"
+            width={400}
+            height={400}
             className="rounded-lg shadow-xl object-cover"
             data-ai-hint="abstract technology"
           />
