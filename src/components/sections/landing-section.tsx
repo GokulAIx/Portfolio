@@ -45,7 +45,6 @@ const LandingSection = () => {
             The Mind Behind The Model.
           </p>
 
-          {/* New "My Socials" Section */}
           <div className="mt-8 p-6 border border-border rounded-xl shadow-xl bg-secondary/50 max-w-md w-full mx-auto md:ml-0">
             <h3 className="text-2xl font-semibold mb-6 text-center md:text-left text-foreground">
               My Socials
@@ -82,7 +81,8 @@ const LandingSection = () => {
             height={400}
             className="rounded-lg shadow-xl object-cover"
             data-ai-hint="progress analytics"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            unoptimized={true} // Added for debugging
+            // sizes prop removed
           />
         </div>
       </div>
