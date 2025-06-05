@@ -23,8 +23,13 @@ const LandingSection = () => {
           <h1 className="text-4xl sm:text-5xl font-bold mb-3 font-headline">
             Gokul Sree Chandra <span className="text-2xl sm:text-3xl text-primary/90 font-medium">@GokulAIx</span>
           </h1>
-          <div className="flex items-center gap-2 text-lg sm:text-xl text-primary mb-4">
-            <span>⚡ ML/NLP Engineer in Progress</span>
+          <div className="flex flex-col items-center md:items-start mb-4">
+            <p className="flex items-center gap-2 text-lg sm:text-xl text-primary">
+              <span>⚡ ML/NLP Engineer in Progress</span>
+            </p>
+            <p className="text-md sm:text-lg text-muted-foreground mt-1">
+              The Mind Behind The Model
+            </p>
           </div>
           <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-md">
             Turning data into intelligent systems. Always learning, always building.
