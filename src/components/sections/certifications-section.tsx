@@ -19,14 +19,16 @@ const CertificationsSection = () => {
               <li key={index} className="flex items-center text-md">
                 <BookMarked className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
                 <span>
-                  {cert.link ? (
-                    <Link href={cert.link} target="_blank" rel="noopener noreferrer" className="font-medium hover:underline text-primary">
-                      {cert.name}
-                    </Link>
-                  ) : (
-                    <span className="font-medium">{cert.name}</span>
-                  )}
-                  <span className="text-muted-foreground text-sm"> - {cert.issuerLogo}</span>
+                  <span className="font-medium">{cert.name}</span>
+                  <span className="text-muted-foreground text-sm"> - {' '}
+                    {cert.link ? (
+                      <Link href={cert.link} target="_blank" rel="noopener noreferrer" className="font-medium hover:underline text-primary">
+                        {cert.issuerLogo}
+                      </Link>
+                    ) : (
+                      cert.issuerLogo
+                    )}
+                  </span>
                 </span>
               </li>
             ))}
