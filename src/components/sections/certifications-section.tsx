@@ -1,9 +1,10 @@
 import SectionContainer from '@/components/shared/section-container';
 import { Card, CardContent } from '@/components/ui/card';
-import { BookMarked } from 'lucide-react'; // Using BookMarked for certifications
+import { BookMarked } from 'lucide-react';
+import Link from 'next/link';
 
 const certifications = [
-  { name: "IBM – Databases and SQL for Data Science", issuerLogo: "IBM" },
+  { name: "IBM – Databases and SQL for Data Science", issuerLogo: "IBM", link: "https://www.credly.com/badges/ff106da2-2c8b-404a-97db-25f720751b53" },
   { name: "Google AI Essentials – Coursera", issuerLogo: "Google" },
   { name: "AI for Everyone – deeplearning.ai", issuerLogo: "deeplearning.ai" },
 ];
@@ -18,7 +19,13 @@ const CertificationsSection = () => {
               <li key={index} className="flex items-center text-md">
                 <BookMarked className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
                 <span>
-                  <span className="font-medium">{cert.name}</span>
+                  {cert.link ? (
+                    <Link href={cert.link} target="_blank" rel="noopener noreferrer" className="font-medium hover:underline text-primary">
+                      {cert.name}
+                    </Link>
+                  ) : (
+                    <span className="font-medium">{cert.name}</span>
+                  )}
                   <span className="text-muted-foreground text-sm"> - {cert.issuerLogo}</span>
                 </span>
               </li>
