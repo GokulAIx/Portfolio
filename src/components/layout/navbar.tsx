@@ -21,16 +21,16 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-5xl items-center px-2 sm:px-4 lg:px-6">
-        <Link href="#home" className="flex items-center gap-x-1"> {/* Reduced gap from gap-x-2 */}
+        <Link href="#home" className="flex items-center gap-x-1">
           {/* Wrapper div for Logo.png */}
-          <div className="relative w-[144px] h-[48px]"> {/* Adjusted wrapper size */}
+          <div className="relative w-[144px] h-[48px]">
             <Image
               src="/Logo.png"
               alt="Logo"
               fill
               className="object-contain rounded-sm"
               priority
-              sizes="(max-width: 768px) 144px, 144px" // Adjusted sizes
+              sizes="(max-width: 768px) 144px, 144px"
             />
           </div>
           {/* Wrapper div for Brand.png - now conditionally displayed */}
@@ -46,10 +46,16 @@ const Navbar = () => {
           </div>
         </Link>
 
-        {/* Desktop navigation: Removed gap-1 to bring items closer */}
+        {/* Desktop navigation: Buttons made more compact with px-2 */}
         <nav className="hidden md:flex flex-nowrap">
           {navItems.map((item) => (
-            <Button key={item.label} variant="ghost" asChild>
+            <Button
+              key={item.label}
+              variant="ghost"
+              asChild
+              size="sm" // Keeps h-9 height and base styling
+              className="px-2" // Overrides horizontal padding from size="sm" (was px-3)
+            >
               <Link href={item.href}>{item.label}</Link>
             </Button>
           ))}
