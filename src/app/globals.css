@@ -151,8 +151,8 @@ body {
     /* Star layers repeat to fill, nebula does not */
     background-repeat: repeat, repeat, repeat, no-repeat;
     
-    /* Fixed stars for parallax effect, nebula scrolls */
-    background-attachment: fixed, fixed, fixed, scroll;
+    /* All layers scroll with the page */
+    background-attachment: scroll, scroll, scroll, scroll;
 
     color: hsl(var(--foreground)); /* Text color for dark mode */
     /* min-height: 100vh; already on body above */
