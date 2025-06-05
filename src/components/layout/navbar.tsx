@@ -20,7 +20,7 @@ const navItems = [
 const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-auto flex h-16 items-center px-0 max-w-full sm:container sm:px-4 md:max-w-5xl lg:px-6 relative">
+      <div className="flex h-16 items-center px-0 max-w-full sm:mx-auto sm:container sm:px-4 md:max-w-5xl lg:px-6 relative">
         
         <Link href="#home" className="flex items-center gap-x-1">
           {/* Wrapper div for Logo.png */}
