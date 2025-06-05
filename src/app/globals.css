@@ -61,10 +61,10 @@ body {
   }
 
   .dark {
-    --background: 222 40% 10%; /* Dark blue-gray */
+    --background: 222 40% 3%; /* Very Dark blue-gray for deep space */
     --foreground: 210 40% 94%; /* Light gray for text */
 
-    --card: 222 40% 12%;
+    --card: 222 40% 12%; /* Card slightly lighter than deep space bg */
     --card-foreground: 210 40% 94%;
 
     --popover: 222 40% 12%;
