@@ -1,3 +1,4 @@
+
 import SectionContainer from '@/components/shared/section-container';
 import { Card, CardContent } from '@/components/ui/card';
 import { Award, Users, Zap } from 'lucide-react'; // Using Zap for hackathons/events
