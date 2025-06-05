@@ -26,10 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} dark`}>
       <head>
-        {/* Explicit link tags for favicon */}
-        <link rel="icon" href="/GokulAIx.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/GokulAIx.png" />
-        
+        {/* Favicon links are now handled by the metadata.icons object above */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
