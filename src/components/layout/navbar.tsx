@@ -22,8 +22,8 @@ const Navbar = () => {
       <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#home" className="flex items-center">
           <Image
-            src="/GokulAIx.png" 
-            alt="Gokul.AI Logo"
+            src="/Logo.png" 
+            alt="Logo"
             width={120} 
             height={40} 
             className="rounded-sm" 
