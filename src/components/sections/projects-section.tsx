@@ -19,33 +19,34 @@ const projectsData = [
     imageHint: "skills assessment",
     githubLink: "https://github.com/Gokul-sc/SkillCheck",
   },
-  // Add more projects here if needed to test scrolling
-  // Example:
-  // {
-  //   title: "Another Project",
-  //   description: "Description for another project to make the content taller.",
-  //   tools: ["React", "Node.js", "MongoDB"],
-  //   imageUrl: "https://placehold.co/600x400.png",
-  //   imageHint: "placeholder project",
-  //   githubLink: "https://github.com/Gokul-sc/",
-  // },
-  // {
-  //   title: "Yet Another Project",
-  //   description: "This is a description for yet another project, further increasing the content height to ensure scrolling is visible.",
-  //   tools: ["Next.js", "Tailwind CSS", "TypeScript"],
-  //   imageUrl: "https://placehold.co/600x400.png",
-  //   imageHint: "web app",
-  //   demoLink: "#",
-  // }
+  // Example projects for testing horizontal scroll:
+  {
+    title: "E-commerce Platform Backend",
+    description: "Designed and implemented a scalable backend for an e-commerce platform using Node.js, Express, and MongoDB, featuring product management, user authentication, and order processing.",
+    tools: ["Node.js", "Express", "MongoDB", "JWT"],
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "online store",
+    githubLink: "https://github.com/Gokul-sc/",
+  },
+  {
+    title: "Weather Dashboard App",
+    description: "A React-based web application that fetches and displays real-time weather data from a third-party API, featuring dynamic updates and a user-friendly interface.",
+    tools: ["React", "API Integration", "CSS"],
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "weather forecast",
+    demoLink: "#",
+  }
 ];
 
 const ProjectsSection = () => {
   return (
     <SectionContainer id="projects" title="My Projects">
-      <div className="border border-border rounded-lg p-4 md:p-6 max-h-[70vh] overflow-y-auto shadow-inner bg-card/50">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <div className="border border-border rounded-lg p-4 md:p-6 overflow-x-auto shadow-inner bg-card/50">
+        <div className="flex flex-nowrap gap-6 lg:gap-8 py-2"> {/* Added py-2 for a little vertical padding for scrollbar */}
           {projectsData.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+            <div key={project.title} className="flex-shrink-0 w-80 md:w-96"> {/* Wrapper for fixed width */}
+              <ProjectCard {...project} />
+            </div>
           ))}
         </div>
       </div>
