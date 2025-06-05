@@ -117,7 +117,7 @@ body {
     @apply bg-background text-foreground; /* Default for light mode */
     min-height: 100vh;
   }
-  html.dark body { /* Applies when html has .dark class */
+  html.dark body {
     --star-opacity-tiny: 0.3;
     --star-opacity-small: 0.5;
     --star-opacity-medium: 0.7;
@@ -155,5 +155,45 @@ body {
     background-attachment: fixed, fixed, fixed, scroll;
 
     color: hsl(var(--foreground)); /* Text color for dark mode */
+    
+    position: relative; /* Ensure stacking context for pseudo-elements */
+    overflow-x: hidden; /* Prevent scrollbars from animation if it briefly extends */
+
+    /* Shooting Star Styles */
+    &::after {
+      content: '';
+      position: fixed; /* Relative to viewport to streak across the whole screen */
+      top: 0; /* Initial Y position for transform */
+      left: 0; /* Initial X position for transform */
+      width: 200px;  /* Length of the star trail */
+      height: 2px;   /* Thickness of the trail */
+      background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* White head fading to transparent tail on the right */
+      border-radius: 1px; /* Slightly rounded ends for the streak */
+      opacity: 0; /* Start invisible */
+      transform-origin: left center; /* Rotate around the "head" (left side of the streak) */
+      animation: shootingStarAnimation 8s linear infinite; /* 8s duration, linear motion, repeats infinitely */
+      animation-delay: 2s; /* Delay before the first animation cycle */
+      z-index: 0; /* Keep it in the background layer, above other body backgrounds but below actual page content */
+    }
+  }
+}
+
+/* Keyframes for the shooting star - defined globally */
+@keyframes shootingStarAnimation {
+  0% {
+    /* Start position: top-right of viewport, angled towards bottom-left */
+    transform: translateX(100vw) translateY(-50px) rotate(-30deg);
+    opacity: 0;
+  }
+  10% { /* Star appears */
+    opacity: 1;
+  }
+  90% { /* Star still visible before disappearing */
+    opacity: 1;
+  }
+  100% {
+    /* End position: bottom-left of viewport, after crossing */
+    transform: translateX(-250px) translateY(100vh) rotate(-30deg); /* -250px to ensure tail is off-screen */
+    opacity: 0;
   }
 }
