@@ -56,6 +56,8 @@ body {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --highlight-yellow: 48 96% 53%; /* Bright Yellow e.g., Tailwind yellow-500 #facc15 */
   }
 
   .dark {
@@ -101,6 +103,8 @@ body {
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --highlight-yellow: 50 98% 64%; /* Bright Yellow for Dark e.g., Tailwind yellow-400 #fde047 */
   }
 }
 
