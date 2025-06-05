@@ -1,7 +1,9 @@
+
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Sparkles } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 const navItems = [
   { href: '#home', label: 'Home' },
@@ -19,8 +21,14 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#home" className="flex items-center gap-2 font-bold text-lg font-headline">
-          <Sparkles className="h-6 w-6 text-primary" />
-          <span>Gokul.AI</span>
+          <Image
+            src="/GokulAIx.png" // Assumes GokulAIx.png is in the public folder
+            alt="Gokul.AI Logo"
+            width={32} // Adjust width as needed
+            height={32} // Adjust height as needed
+            className="rounded-sm" // Optional: if you want rounded corners
+          />
+          <span className="hidden sm:inline">Gokul.AI</span> {/* Show text on larger screens */}
         </Link>
         
         <nav className="hidden md:flex gap-1">
