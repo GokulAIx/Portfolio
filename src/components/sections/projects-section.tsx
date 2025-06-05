@@ -5,7 +5,7 @@ const projectsData = [
   {
     title: "Sentiment Analysis on IMDB Dataset",
     description: "Built using PyTorch and Sentence Transformers. Achieved 80.24% accuracy on 50K reviews using transfer learning.",
-    tools: ["PyTorch", "Sentence Transformers", "Numpy", "Pandas"],
+    tools: ["Python", "PyTorch", "Sentence Transformers"],
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "text analysis",
     // githubLink: "Optional if public", // Omitted as per instruction
