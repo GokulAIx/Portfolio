@@ -27,22 +27,22 @@ const Footer = () => {
           <div className="flex gap-3">
             <Button variant="ghost" size="icon" asChild>
               <Link href="https://github.com/Gokul-sc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <Github className="h-5 w-5" />
+                <Github className="h-6 w-6" />
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <Link href="https://www.linkedin.com/in/gokulsreechandra/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="h-6 w-6" />
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <Link href="https://x.com/GokulAIx" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
-                <XIcon className="h-5 w-5" />
+                <XIcon className="h-6 w-6" />
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <Link href="mailto:polavarapugokul@gmail.com" aria-label="Email">
-                <Mail className="h-5 w-5" />
+                <Mail className="h-6 w-6" />
               </Link>
             </Button>
           </div>
