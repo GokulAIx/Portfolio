@@ -20,15 +20,15 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="#home" className="flex items-center gap-2 font-bold text-lg font-headline">
+        <Link href="#home" className="flex items-center gap-2">
           <Image
-            src="/GokulAIx.png" // Assumes GokulAIx.png is in the public folder
+            src="/GokulAIx.png" 
             alt="Gokul.AI Logo"
-            width={32} // Adjust width as needed
-            height={32} // Adjust height as needed
-            className="rounded-sm" // Optional: if you want rounded corners
+            width={32} 
+            height={32} 
+            className="rounded-sm" 
           />
-          <span className="hidden sm:inline">Gokul.AI</span> {/* Show text on larger screens */}
+          <span className="hidden sm:inline font-bold text-lg font-headline">Gokul.AI</span>
         </Link>
         
         <nav className="hidden md:flex gap-1">
