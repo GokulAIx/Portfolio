@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Github, Linkedin, Mail, Sparkles, Cpu } from 'lucide-react';
@@ -16,11 +17,11 @@ const LandingSection = () => {
               fill={true}
               style={{ objectFit: 'cover' }}
               data-ai-hint="profile person"
-              priority // Good to add for LCP images
+              priority
             />
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-3 font-headline">
-            Gokul Sree Chandra
+            Gokul Sree Chandra <span className="text-2xl sm:text-3xl text-primary/90 font-medium">@Gokulaix</span>
           </h1>
           <div className="flex items-center gap-2 text-lg sm:text-xl text-primary mb-4">
             <Sparkles className="w-5 h-5" />
