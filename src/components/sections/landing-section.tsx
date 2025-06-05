@@ -44,30 +44,34 @@ const LandingSection = () => {
           <p className="text-base sm:text-lg text-muted-foreground mb-6 max-w-md">
             The Mind Behind The Model.
           </p>
-          <p className="text-sm font-semibold text-foreground/80 mb-2">
-            My Socials
-          </p>
-          <div className="flex gap-4">
-            <Button variant="outline" size="icon" asChild>
-              <Link href="https://github.com/Gokul-sc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <Github className="h-5 w-5" />
-              </Link>
-            </Button>
-            <Button variant="outline" size="icon" asChild>
-              <Link href="https://www.linkedin.com/in/gokulsreechandra/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
-              </Link>
-            </Button>
-            <Button variant="outline" size="icon" asChild>
-              <Link href="https://x.com/GokulAIx" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
-                <XIcon className="h-5 w-5" />
-              </Link>
-            </Button>
-            <Button variant="outline" size="icon" asChild>
-              <Link href="mailto:polavarapugokul@gmail.com" aria-label="Email">
-                <Mail className="h-5 w-5" />
-              </Link>
-            </Button>
+
+          {/* New "My Socials" Section */}
+          <div className="mt-8 p-6 border border-border rounded-xl shadow-xl bg-card max-w-md w-full mx-auto md:ml-0">
+            <h3 className="text-2xl font-semibold mb-6 text-center md:text-left text-foreground">
+              My Socials
+            </h3>
+            <div className="flex justify-center md:justify-start gap-4">
+              <Button variant="outline" size="icon" asChild>
+                <Link href="https://github.com/Gokul-sc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <Github className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="icon" asChild>
+                <Link href="https://www.linkedin.com/in/gokulsreechandra/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <Linkedin className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="icon" asChild>
+                <Link href="https://x.com/GokulAIx" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
+                  <XIcon className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="icon" asChild>
+                <Link href="mailto:polavarapugokul@gmail.com" aria-label="Email">
+                  <Mail className="h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
         <div className="hidden md:flex justify-center">
