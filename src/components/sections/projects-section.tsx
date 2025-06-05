@@ -19,23 +19,6 @@ const projectsData = [
     imageHint: "skills assessment",
     githubLink: "https://github.com/Gokul-sc/SkillCheck",
   },
-  // Example projects for testing horizontal scroll:
-  {
-    title: "E-commerce Platform Backend",
-    description: "Designed and implemented a scalable backend for an e-commerce platform using Node.js, Express, and MongoDB, featuring product management, user authentication, and order processing.",
-    tools: ["Node.js", "Express", "MongoDB", "JWT"],
-    imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "online store",
-    githubLink: "https://github.com/Gokul-sc/",
-  },
-  {
-    title: "Weather Dashboard App",
-    description: "A React-based web application that fetches and displays real-time weather data from a third-party API, featuring dynamic updates and a user-friendly interface.",
-    tools: ["React", "API Integration", "CSS"],
-    imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "weather forecast",
-    demoLink: "#",
-  }
 ];
 
 const ProjectsSection = () => {
