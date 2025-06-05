@@ -21,15 +21,17 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#home" className="flex items-center">
-          <Image
-            src="/Logo.png"
-            alt="Logo"
-            width={90} // Further reduced width
-            height={30} // Further reduced height
-            className="rounded-sm"
-            style={{ objectFit: 'contain' }} // Ensures the image scales within the dimensions
-            priority
-          />
+          {/* Wrapper div to strictly control the logo's rendered area and aspect ratio */}
+          <div className="relative w-[80px] h-[30px]"> {/* Adjusted for a smaller, fixed size */}
+            <Image
+              src="/Logo.png"
+              alt="Logo"
+              fill // Image will fill this parent div
+              className="object-contain rounded-sm" // Ensures image scales within bounds, maintaining aspect ratio
+              priority
+              sizes="(max-width: 768px) 80px, 80px" // Provides a hint to Next.js for image optimization
+            />
+          </div>
         </Link>
 
         <nav className="hidden md:flex gap-1">
