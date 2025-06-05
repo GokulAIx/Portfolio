@@ -28,7 +28,6 @@ const Navbar = () => {
             height={32} 
             className="rounded-sm" 
           />
-          <span className="hidden sm:inline font-bold text-lg font-headline">Gokul.AI</span>
         </Link>
         
         <nav className="hidden md:flex gap-1">
