@@ -46,8 +46,8 @@ const Navbar = () => {
           </div>
         </Link>
 
-        {/* Added ml-6 to move desktop nav closer to logo */}
-        <nav className="hidden md:flex gap-1 ml-6">
+        {/* Changed ml-6 to ml-2 to move desktop nav closer to logo */}
+        <nav className="hidden md:flex gap-1 ml-2">
           {navItems.map((item) => (
             <Button key={item.label} variant="ghost" asChild>
               <Link href={item.href}>{item.label}</Link>
