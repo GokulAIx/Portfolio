@@ -24,11 +24,11 @@ const LandingSection = () => {
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-lg mb-6 border-4 border-primary/50">
             <Image
-              src="https://placehold.co/300x300.png"
+              src="/Profile-pic.jpg"
               alt="Gokul Sree Chandra"
               fill={true}
               style={{ objectFit: 'cover' }}
-              data-ai-hint="profile person"
+              data-ai-hint="profile photo"
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
