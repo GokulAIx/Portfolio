@@ -8,7 +8,7 @@ const projectsData = [
     tools: ["Python", "PyTorch", "sentence-transformers", "Neural Networks"],
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "text analysis",
-    // githubLink: "Optional if public", // Omitted as per instruction
+    githubLink: "https://github.com/Gokul-sc/PROJECTS",
   },
   {
     title: "SkillCheck – AI Skill Evaluator",
