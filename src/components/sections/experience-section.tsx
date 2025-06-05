@@ -3,13 +3,13 @@ import ExperienceItem from '@/components/experience/experience-item';
 
 const experienceData = [
   {
-    title: "Head of Operations (Tech Internship)",
-    company: "Young Compete",
-    duration: "June 2024 – Jan 2025",
+    title: "Head Of Operations (Technical Internship, Full Time)",
+    company: "Young Compete (Remote, India)",
+    duration: "July 2024 – January 2025",
     responsibilities: [
-      "Built Prof Connect platform for 1,500+ users",
-      "Automated placement data scraping from 5+ sources",
-      "Organized events and led technical teams",
+      "Developed 3+ tech projects, including Prof Connect, enabling streamlined networking for 1,500+ students and teachers.",
+      "Automated data scraping from 5 sources for the off-campus placements page, utilizing APIs, and improved access rate by 30%.",
+      "Led a team to deliver technical solutions and organized events, focusing on user engagement and community building.",
     ],
   },
 ];
