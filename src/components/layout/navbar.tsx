@@ -20,8 +20,9 @@ const navItems = [
 const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 max-w-5xl items-center px-2 sm:px-4 lg:px-6">
-        <Link href="#home" className="flex items-center gap-x-1">
+      <div className="container mx-auto flex h-16 max-w-5xl items-center px-2 sm:px-4 lg:px-6 relative"> {/* Added relative */}
+        
+        <Link href="#home" className="flex items-center"> {/* Logo Link - removed gap-x-1 */}
           {/* Wrapper div for Logo.png */}
           <div className="relative w-[144px] h-[48px]">
             <Image
@@ -33,8 +34,11 @@ const Navbar = () => {
               sizes="(max-width: 768px) 144px, 144px"
             />
           </div>
-          {/* Wrapper div for Brand.png - now conditionally displayed */}
-          <div className="relative w-[150px] h-[48px] md:hidden"> {/* Visible on mobile, hidden on md+ */}
+        </Link>
+
+        {/* Brand.png - Centered on Mobile, hidden on desktop */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:hidden">
+          <div className="relative w-[150px] h-[48px]"> {/* Wrapper for Brand.png */}
             <Image
               src="/Brand.png"
               alt="Brand Name"
@@ -44,7 +48,7 @@ const Navbar = () => {
               data-ai-hint="brand text"
             />
           </div>
-        </Link>
+        </div>
 
         {/* Desktop navigation: Buttons made more compact with px-2 */}
         <nav className="hidden md:flex flex-nowrap">
@@ -53,8 +57,8 @@ const Navbar = () => {
               key={item.label}
               variant="ghost"
               asChild
-              size="sm" // Keeps h-9 height and base styling
-              className="px-2" // Overrides horizontal padding from size="sm" (was px-3)
+              size="sm" 
+              className="px-2" 
             >
               <Link href={item.href}>{item.label}</Link>
             </Button>
