@@ -7,7 +7,7 @@ const projectsData = [
     title: "Sentiment Analysis on IMDB Dataset",
     description: "Used the pre-trained Sentence-Transformer (all-MiniLM-L6-v2) to generate sentence embeddings and built a fully connected PyTorch neural network to classify reviews as positive or negative. Processed 50,000 IMDB reviews and achieved 80.24% test accuracy, demonstrating transfer learning’s effectiveness in sentiment analysis.",
     tools: ["Python", "PyTorch", "sentence-transformers", "Neural Networks"],
-    imageUrl: "https://placehold.co/600x400.png", // <-- Temporarily changed for diagnostics
+    imageUrl: "/Sentiment-Analysis.jpg", // Changed from .png and placeholder
     imageHint: "text analysis",
     githubLink: "https://github.com/Gokul-sc/PROJECTS",
   },
