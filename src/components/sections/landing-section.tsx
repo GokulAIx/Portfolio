@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, Sparkles, Cpu } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import SectionContainer from '@/components/shared/section-container';
 import { Button } from '@/components/ui/button';
 
@@ -24,13 +24,7 @@ const LandingSection = () => {
             Gokul Sree Chandra <span className="text-2xl sm:text-3xl text-primary/90 font-medium">@GokulAIx</span>
           </h1>
           <div className="flex items-center gap-2 text-lg sm:text-xl text-primary mb-4">
-            <Sparkles className="w-5 h-5" />
-            <span>AI/ML</span>
-            <span className="text-foreground/50">|</span>
-            <Cpu className="w-5 h-5" />
-            <span>NLP Enthusiast</span>
-            <span className="text-foreground/50">|</span>
-            <span>Tech Explorer</span>
+            <span>⚡ ML/NLP Engineer in Progress</span>
           </div>
           <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-md">
             Turning data into intelligent systems. Always learning, always building.
