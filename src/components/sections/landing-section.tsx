@@ -46,7 +46,7 @@ const LandingSection = () => {
           </p>
 
           {/* New "My Socials" Section */}
-          <div className="mt-8 p-6 border border-border rounded-xl shadow-xl bg-card max-w-md w-full mx-auto md:ml-0">
+          <div className="mt-8 p-6 border border-border rounded-xl shadow-xl bg-secondary/50 max-w-md w-full mx-auto md:ml-0">
             <h3 className="text-2xl font-semibold mb-6 text-center md:text-left text-foreground">
               My Socials
             </h3>
