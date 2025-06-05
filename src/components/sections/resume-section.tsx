@@ -14,7 +14,12 @@ const ResumeSection = () => {
             Interested in learning more about my qualifications? Download my resume for a detailed overview.
           </p>
           <Button asChild size="lg">
-            <Link href="#resume-link-placeholder" target="_blank" rel="noopener noreferrer"> {/* Replace with actual link */}
+            {/* 
+              Ensure your resume PDF is named "Gokul_Sree_Chandra_Resume.pdf" 
+              and placed in the "public" folder of your project.
+              Or, update the href below to match your actual filename.
+            */}
+            <Link href="/Gokul_Sree_Chandra_Resume.pdf" target="_blank" rel="noopener noreferrer" download="Gokul_Sree_Chandra_Resume.pdf">
               <Download className="mr-2 h-5 w-5" />
               Download Resume
             </Link>
