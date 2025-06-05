@@ -75,7 +75,7 @@ const LandingSection = () => {
         </div>
         <div className="hidden md:flex justify-center">
           <Image
-            src="/Progess-Bar.jpg" 
+            src="/Progress-Bar.jpg" 
             alt="Progress Bar Visual"
             width={400}
             height={400}
