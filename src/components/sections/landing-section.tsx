@@ -21,7 +21,7 @@ const LandingSection = () => {
             />
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-3 font-headline">
-            Gokul Sree Chandra <span className="text-2xl sm:text-3xl text-primary/90 font-medium">@Gokulaix</span>
+            Gokul Sree Chandra <span className="text-2xl sm:text-3xl text-primary/90 font-medium">@GokulAIx</span>
           </h1>
           <div className="flex items-center gap-2 text-lg sm:text-xl text-primary mb-4">
             <Sparkles className="w-5 h-5" />
@@ -61,6 +61,7 @@ const LandingSection = () => {
             height={400}
             className="rounded-lg shadow-xl object-cover"
             data-ai-hint="abstract technology"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
       </div>
