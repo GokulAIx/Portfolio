@@ -19,7 +19,8 @@ const navItems = [
 const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-2 sm:px-4 lg:px-6"> {/* Adjusted padding here */}
+      {/* Removed justify-between from this div */}
+      <div className="container mx-auto flex h-16 max-w-5xl items-center px-2 sm:px-4 lg:px-6">
         <Link href="#home" className="flex items-center gap-x-2">
           {/* Wrapper div for Logo.png */}
           <div className="relative w-[144px] h-[48px]">
@@ -45,7 +46,8 @@ const Navbar = () => {
           </div>
         </Link>
 
-        <nav className="hidden md:flex gap-1">
+        {/* Added ml-6 to move desktop nav closer to logo */}
+        <nav className="hidden md:flex gap-1 ml-6">
           {navItems.map((item) => (
             <Button key={item.label} variant="ghost" asChild>
               <Link href={item.href}>{item.label}</Link>
@@ -53,24 +55,27 @@ const Navbar = () => {
           ))}
         </nav>
 
-        <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Open menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <nav className="flex flex-col gap-4 mt-8">
-                {navItems.map((item) => (
-                  <Button key={item.label} variant="ghost" asChild className="w-full justify-start text-lg">
-                    <Link href={item.href}>{item.label}</Link>
-                  </Button>
-                ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
+        {/* This div with ml-auto will push itself (and its content) to the far right */}
+        <div className="ml-auto">
+          <div className="md:hidden"> {/* Mobile menu trigger */}
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Open menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right">
+                <nav className="flex flex-col gap-4 mt-8">
+                  {navItems.map((item) => (
+                    <Button key={item.label} variant="ghost" asChild className="w-full justify-start text-lg">
+                      <Link href={item.href}>{item.label}</Link>
+                    </Button>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
