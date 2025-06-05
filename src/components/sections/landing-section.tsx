@@ -53,22 +53,22 @@ const LandingSection = () => {
             <div className="flex justify-center md:justify-start gap-4">
               <Button variant="outline" size="icon" asChild>
                 <Link href="https://github.com/Gokul-sc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <Github className="h-5 w-5" />
+                  <Github className="h-6 w-6" />
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
                 <Link href="https://www.linkedin.com/in/gokulsreechandra/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <Linkedin className="h-5 w-5" />
+                  <Linkedin className="h-6 w-6 text-blue-600 dark:text-blue-500" />
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
                 <Link href="https://x.com/GokulAIx" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
-                  <XIcon className="h-5 w-5" />
+                  <XIcon className="h-6 w-6" />
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
                 <Link href="mailto:polavarapugokul@gmail.com" aria-label="Email">
-                  <Mail className="h-5 w-5" />
+                  <Mail className="h-6 w-6" />
                 </Link>
               </Button>
             </div>
