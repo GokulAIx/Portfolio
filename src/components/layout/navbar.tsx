@@ -32,8 +32,8 @@ const Navbar = () => {
               sizes="(max-width: 768px) 144px, 144px" 
             />
           </div>
-          {/* Wrapper div for Brand.png */}
-          <div className="relative w-[150px] h-[48px]">
+          {/* Wrapper div for Brand.png - now conditionally displayed */}
+          <div className="relative w-[150px] h-[48px] md:hidden">
             <Image
               src="/Brand.png"
               alt="Brand Name"
