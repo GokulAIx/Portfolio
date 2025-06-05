@@ -22,18 +22,18 @@ const Navbar = () => {
       <div className="container mx-auto flex h-16 max-w-5xl items-center px-2 sm:px-4 lg:px-6">
         <Link href="#home" className="flex items-center gap-x-1"> {/* Reduced gap from gap-x-2 */}
           {/* Wrapper div for Logo.png */}
-          <div className="relative w-[144px] h-[48px]">
+          <div className="relative w-[144px] h-[48px]"> {/* Adjusted wrapper size */}
             <Image
               src="/Logo.png"
               alt="Logo"
-              fill 
-              className="object-contain rounded-sm" 
+              fill
+              className="object-contain rounded-sm"
               priority
-              sizes="(max-width: 768px) 144px, 144px" 
+              sizes="(max-width: 768px) 144px, 144px" // Adjusted sizes
             />
           </div>
           {/* Wrapper div for Brand.png - now conditionally displayed */}
-          <div className="relative w-[150px] h-[48px] md:hidden">
+          <div className="relative w-[150px] h-[48px] md:hidden"> {/* Visible on mobile, hidden on md+ */}
             <Image
               src="/Brand.png"
               alt="Brand Name"
@@ -45,8 +45,8 @@ const Navbar = () => {
           </div>
         </Link>
 
-        {/* Removed overflow-x-auto */}
-        <nav className="hidden md:flex flex-nowrap gap-1 ml-2">
+        {/* Desktop navigation: Removed ml-2, relying on gap-1 between items */}
+        <nav className="hidden md:flex flex-nowrap gap-1">
           {navItems.map((item) => (
             <Button key={item.label} variant="ghost" asChild>
               <Link href={item.href}>{item.label}</Link>
@@ -54,7 +54,7 @@ const Navbar = () => {
           ))}
         </nav>
 
-        <div className="ml-auto"> 
+        <div className="ml-auto"> {/* Pushes mobile menu to the right */}
           <div className="md:hidden"> {/* Mobile menu trigger */}
             <Sheet>
               <SheetTrigger asChild>
