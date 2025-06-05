@@ -24,9 +24,10 @@ const Navbar = () => {
           <Image
             src="/Logo.png" 
             alt="Logo"
-            width={120} 
-            height={40} 
+            width={100} 
+            height={34} 
             className="rounded-sm" 
+            style={{ objectFit: 'contain' }}
             priority
           />
         </Link>
