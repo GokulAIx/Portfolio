@@ -4,7 +4,7 @@ import { UserCircle } from 'lucide-react';
 const AboutSection = () => {
   return (
     <SectionContainer id="about" title="About Me">
-      <div className="max-w-3xl mx-auto text-center md:text-left bg-card p-8 rounded-xl shadow-lg">
+      <div className="max-w-3xl mx-auto text-center md:text-left bg-card p-8 rounded-xl shadow-lg max-h-[60vh] overflow-y-auto">
         <div className="flex justify-center md:hidden mb-6">
            <UserCircle className="w-16 h-16 text-primary" />
         </div>
