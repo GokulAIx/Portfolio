@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} dark`}>
       <head>
-        {/* Favicon links are primarily handled by the metadata.icons object */}
+        {/* Favicon links are primarily handled by the metadata.icons object above */}
       </head>
       <body className="font-body antialiased">
         {children}
