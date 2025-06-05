@@ -151,10 +151,9 @@ body {
     /* Star layers repeat to fill, nebula does not */
     background-repeat: repeat, repeat, repeat, no-repeat;
     
-    /* All layers scroll with the page */
-    background-attachment: scroll, scroll, scroll, scroll;
+    /* Star layers are fixed, nebula scrolls */
+    background-attachment: fixed, fixed, fixed, scroll;
 
     color: hsl(var(--foreground)); /* Text color for dark mode */
-    /* min-height: 100vh; already on body above */
   }
 }
