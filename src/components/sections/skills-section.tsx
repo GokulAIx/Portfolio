@@ -1,7 +1,6 @@
 import SectionContainer from '@/components/shared/section-container';
 import SkillCategory from '@/components/skills/skill-category';
-import SkillEvaluatorForm from '@/components/skills/skill-evaluator-form';
-import { Code2, Brain, Database, Wrench, Lightbulb } from 'lucide-react';
+import { Code2, Brain, Lightbulb, Wrench } from 'lucide-react';
 
 const skillsData = {
   languages: {
@@ -35,7 +34,6 @@ const SkillsSection = () => {
         <SkillCategory title={skillsData.concepts.title} skills={skillsData.concepts.items} icon={skillsData.concepts.icon} />
         <SkillCategory title={skillsData.tools.title} skills={skillsData.tools.items} icon={skillsData.tools.icon} />
       </div>
-      <SkillEvaluatorForm />
     </SectionContainer>
   );
 };

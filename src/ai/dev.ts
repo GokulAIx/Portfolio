@@ -1,4 +1,4 @@
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/skill-check-evaluate-skills.ts';
+// Removed import for skill-check-evaluate-skills.ts as the feature is deleted.
