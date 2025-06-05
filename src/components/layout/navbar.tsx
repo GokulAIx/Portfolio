@@ -45,8 +45,8 @@ const Navbar = () => {
           </div>
         </Link>
 
-        {/* Added flex-nowrap and overflow-x-auto for horizontal scrolling */}
-        <nav className="hidden md:flex flex-nowrap overflow-x-auto gap-1 ml-2">
+        {/* Removed overflow-x-auto */}
+        <nav className="hidden md:flex flex-nowrap gap-1 ml-2">
           {navItems.map((item) => (
             <Button key={item.label} variant="ghost" asChild>
               <Link href={item.href}>{item.label}</Link>
