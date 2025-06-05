@@ -61,7 +61,7 @@ body {
   }
 
   .dark {
-    --background: 222 40% 3%; /* Very Dark blue-gray for deep space */
+    --background: 222 40% 1.5%; /* Even darker space for --background */
     --foreground: 210 40% 94%; /* Light gray for text */
 
     --card: 222 40% 12%; /* Card slightly lighter than deep space bg */
@@ -80,7 +80,7 @@ body {
     --muted-foreground: 210 30% 70%;
 
     --accent: 270 30% 70%; /* Slightly darker but still pale violet */
-    --accent-nebula: 270 30% 70% / 0.1; /* Subtle pale violet for nebula effect */
+    --accent-nebula: 270 30% 70% / 0.05; /* Very subtle pale violet for nebula effect */
     --accent-foreground: 270 30% 20%; /* Darker violet text */
 
     --destructive: 0 62.8% 30.6%;
@@ -115,8 +115,46 @@ body {
   }
   body {
     @apply bg-background text-foreground; /* Default for light mode */
+    min-height: 100vh;
   }
   html.dark body { /* Applies when html has .dark class */
-    @apply bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--accent-nebula))] to-[hsl(var(--background))] text-foreground;
+    --star-opacity-tiny: 0.3;
+    --star-opacity-small: 0.5;
+    --star-opacity-medium: 0.7;
+
+    background-color: hsl(var(--background)); /* Base solid color, very dark */
+
+    /* Star layers on top, then nebula gradient */
+    background-image:
+      /* Tiny stars - high density pattern, low opacity */
+      radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-tiny)) 0.5px, transparent 0.5px),
+      /* Small stars - medium density pattern, medium opacity */
+      radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-small)) 1px, transparent 1px),
+      /* Medium stars - low density pattern, higher opacity */
+      radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-medium)) 1.5px, transparent 1.5px),
+      /* Nebula gradient - behind the stars */
+      linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--accent-nebula)), hsl(var(--background)));
+
+    background-size:
+      50px 50px,  /* Tile size for tiny stars */
+      100px 100px, /* Tile size for small stars */
+      150px 150px, /* Tile size for medium stars */
+      auto;        /* Nebula gradient covers full element */
+
+    /* Offset positions for each star layer to break up the grid look */
+    background-position:
+      0 0,         /* Tiny stars */
+      25px 25px,   /* Small stars - offset from tiny */
+      50px 50px,   /* Medium stars - further offset */
+      center center; /* Nebula gradient */
+
+    /* Star layers repeat to fill, nebula does not */
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    
+    /* Fixed stars for parallax effect, nebula scrolls */
+    background-attachment: fixed, fixed, fixed, scroll;
+
+    color: hsl(var(--foreground)); /* Text color for dark mode */
+    /* min-height: 100vh; already on body above */
   }
 }
