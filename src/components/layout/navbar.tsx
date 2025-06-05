@@ -19,11 +19,10 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 left-0 right-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-16 items-center px-0 sm:mx-auto sm:container sm:px-4 md:max-w-5xl lg:px-6 relative">
         
         <Link href="#home" className="flex items-center gap-x-1">
-          {/* Wrapper div for Logo.png */}
           <div className="relative w-[144px] h-[48px]">
             <Image
               src="/Logo.png"
@@ -38,7 +37,7 @@ const Navbar = () => {
 
         {/* Brand.png - Centered on Mobile, hidden on desktop */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:hidden">
-          <div className="relative w-[150px] h-[48px]"> {/* Wrapper for Brand.png */}
+          <div className="relative w-[150px] h-[48px]">
             <Image
               src="/Brand.png"
               alt="Brand Name"
@@ -50,7 +49,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop navigation: Buttons made more compact with px-2 */}
+        {/* Desktop navigation */}
         <nav className="hidden md:flex flex-nowrap">
           {navItems.map((item) => (
             <Button
@@ -58,7 +57,7 @@ const Navbar = () => {
               variant="ghost"
               asChild
               size="sm" 
-              className="px-2" 
+              className="px-2"
             >
               <Link href={item.href}>{item.label}</Link>
             </Button>
