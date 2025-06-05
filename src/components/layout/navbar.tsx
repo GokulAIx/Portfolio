@@ -13,6 +13,7 @@ const navItems = [
   { href: '#experience', label: 'Experience' },
   { href: '#achievements', label: 'Achievements' },
   { href: '#certifications', label: 'Certifications' },
+  { href: '#resume', label: 'Resume' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -45,8 +46,8 @@ const Navbar = () => {
           </div>
         </Link>
 
-        {/* Desktop navigation: Removed ml-2, relying on gap-1 between items */}
-        <nav className="hidden md:flex flex-nowrap gap-1">
+        {/* Desktop navigation: Removed gap-1 to bring items closer */}
+        <nav className="hidden md:flex flex-nowrap">
           {navItems.map((item) => (
             <Button key={item.label} variant="ghost" asChild>
               <Link href={item.href}>{item.label}</Link>
