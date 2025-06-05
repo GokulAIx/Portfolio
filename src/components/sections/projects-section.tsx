@@ -4,7 +4,7 @@ import ProjectCard from '@/components/projects/project-card';
 const projectsData = [
   {
     title: "Sentiment Analysis on IMDB Dataset",
-    description: "Utilized the pre-trained Sentence-Transformer model (all-MiniLM-L6-v2) for generating sentence embeddings and built a fully connected neural network classifier in PyTorch to predict sentiment labels (positive/negative). Processed 50,000 reviews from the IMDB dataset and achieved 80.24% accuracy on the test set, showcasing the effectiveness of transfer learning in sentiment analysis. Technologies used include Python, PyTorch, and the sentence-transformers library.",
+    description: "Used the pre-trained Sentence-Transformer (all-MiniLM-L6-v2) to generate sentence embeddings and built a fully connected PyTorch neural network to classify reviews as positive or negative. Processed 50,000 IMDB reviews and achieved 80.24% test accuracy, demonstrating transfer learning’s effectiveness in sentiment analysis.",
     tools: ["Python", "PyTorch", "sentence-transformers", "Neural Networks"],
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "text analysis",
