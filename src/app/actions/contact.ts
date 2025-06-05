@@ -2,6 +2,7 @@
 'use server';
 
 import { z } from 'zod';
+import { Resend } from 'resend';
 
 const ContactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -20,17 +21,35 @@ export interface ContactFormState {
   success?: boolean;
 }
 
-// Read recipient email from environment variable
+// Read environment variables
 const RECIPIENT_EMAIL = process.env.CONTACT_FORM_RECIPIENT_EMAIL;
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const EMAIL_SENDER_ADDRESS = process.env.EMAIL_SENDER_ADDRESS;
 
 export async function submitContactFormAction(
   prevState: ContactFormState | undefined,
   formData: FormData
 ): Promise<ContactFormState> {
   if (!RECIPIENT_EMAIL) {
-    console.error("CONTACT_FORM_RECIPIENT_EMAIL environment variable is not set. Please ensure it's defined in your .env file.");
+    console.error("CONTACT_FORM_RECIPIENT_EMAIL environment variable is not set.");
     return {
-      error: "The contact form is currently not configured to send messages. Please contact the site administrator.",
+      error: "The contact form is currently not configured to send messages (recipient missing). Please contact the site administrator.",
+      success: false,
+    };
+  }
+
+  if (!RESEND_API_KEY) {
+    console.error("RESEND_API_KEY environment variable is not set.");
+    return {
+      error: "The contact form is currently not configured to send messages (API key missing). Please contact the site administrator.",
+      success: false,
+    };
+  }
+
+  if (!EMAIL_SENDER_ADDRESS) {
+    console.error("EMAIL_SENDER_ADDRESS environment variable is not set (e.g., 'Portfolio <noreply@yourverifieddomain.com>').");
+    return {
+      error: "The contact form is currently not configured to send messages (sender address missing). Please contact the site administrator.",
       success: false,
     };
   }
@@ -51,41 +70,47 @@ export async function submitContactFormAction(
     };
   }
 
-  // In a real application, you would integrate an email sending service here.
-  // For example, using Resend, SendGrid, Nodemailer with an SMTP provider, etc.
-  //
-  // Example (conceptual - would require installing and configuring an email library):
-  // try {
-  //   const emailClient = new EmailClient({ apiKey: process.env.EMAIL_API_KEY }); // Ensure EMAIL_API_KEY is in .env
-  //   await emailClient.send({
-  //     from: 'Your Portfolio <noreply@yourdomain.com>', // Or use a verified sender from your email service
-  //     to: RECIPIENT_EMAIL,
-  //     reply_to: validatedFields.data.email,
-  //     subject: `New Contact Form Submission from ${validatedFields.data.name}`,
-  //     html: `<p>Name: ${validatedFields.data.name}</p>
-  //            <p>Email: ${validatedFields.data.email}</p>
-  //            <p>Message: ${validatedFields.data.message}</p>`,
-  //   });
-  //   console.log("Email sent successfully to:", RECIPIENT_EMAIL);
-  // } catch (error) {
-  //   console.error("Failed to send email:", error);
-  //   return {
-  //     error: "There was an issue sending your message. Please try again later.",
-  //     success: false,
-  //   };
-  // }
+  const resend = new Resend(RESEND_API_KEY);
 
-  console.log("Contact form submission received (simulation):");
-  console.log("Intended Recipient:", RECIPIENT_EMAIL);
-  console.log("Sender Name:", validatedFields.data.name);
-  console.log("Sender Email:", validatedFields.data.email);
-  console.log("Message:", validatedFields.data.message);
-  console.log("--- This is a simulation. In a real app, an email would be sent via an integrated service. ---");
+  try {
+    const { data, error } = await resend.emails.send({
+      from: EMAIL_SENDER_ADDRESS, // e.g., 'Your Portfolio <onboarding@resend.dev>' or your verified domain
+      to: [RECIPIENT_EMAIL],
+      reply_to: validatedFields.data.email,
+      subject: `New Contact Form Submission from ${validatedFields.data.name}`,
+      html: `<p>Name: ${validatedFields.data.name}</p>
+             <p>Email: ${validatedFields.data.email}</p>
+             <p>Message: ${validatedFields.data.message.replace(/\n/g, '<br>')}</p>`,
+      text: `Name: ${validatedFields.data.name}\nEmail: ${validatedFields.data.email}\nMessage: ${validatedFields.data.message}`,
+    });
 
+    if (error) {
+      console.error("Resend API Error:", error);
+      return {
+        error: "There was an issue sending your message. Please try again later.",
+        success: false,
+      };
+    }
 
-  // Simulate successful submission for now
-  return {
-    message: "Thank you for your message! I'll get back to you soon.",
-    success: true,
-  };
+    console.log("Email sent successfully via Resend:", data);
+    return {
+      message: "Thank you for your message! I'll get back to you soon.",
+      success: true,
+    };
+
+  } catch (exception) {
+    console.error("Failed to send email with Resend:", exception);
+    // It's good to check the type of exception if possible, or log its structure.
+    let errorMessage = "An unexpected error occurred while sending your message.";
+    if (exception instanceof Error) {
+      errorMessage = `An unexpected error occurred: ${exception.message}. Please try again later.`;
+    } else if (typeof exception === 'object' && exception !== null && 'message' in exception) {
+       errorMessage = `An unexpected error occurred: ${(exception as {message: string}).message}. Please try again later.`;
+    }
+    
+    return {
+      error: errorMessage,
+      success: false,
+    };
+  }
 }
