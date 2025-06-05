@@ -75,14 +75,12 @@ const LandingSection = () => {
         </div>
         <div className="hidden md:flex justify-center">
           <Image
-            src="/ProgressBar.jpg"
+            src="https://placehold.co/400x400.png" 
             alt="Abstract AI art"
             width={400}
             height={400}
             className="rounded-lg shadow-xl object-cover"
-            data-ai-hint="progress analytics"
-            unoptimized={true} // Added for debugging
-            // sizes prop removed
+            data-ai-hint="abstract technology"
           />
         </div>
       </div>
