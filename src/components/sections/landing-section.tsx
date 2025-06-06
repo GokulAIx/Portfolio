@@ -51,7 +51,7 @@ const LandingSection = () => {
             </h3>
             <div className="flex justify-center md:justify-start gap-4">
               <Button variant="outline" size="icon" asChild>
-                <Link href="https://github.com/Gokul-sc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <Link href="https://github.com/GokulAIx" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="h-7 w-7" />
                 </Link>
               </Button>

@@ -26,7 +26,7 @@ const Footer = () => {
           </p>
           <div className="flex gap-3">
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://github.com/Gokul-sc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <Link href="https://github.com/GokulAIx" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-6 w-6" />
               </Link>
             </Button>
