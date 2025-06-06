@@ -15,10 +15,10 @@ const ResumeSection = () => {
           </p>
           <Button asChild size="lg">
             {/* 
-              Ensure your resume PDF is named "Gokul--Resume.pdf" 
+              Ensure your resume PDF is named "Gokul-Resume.pdf" 
               and placed in the "public" folder of your project.
             */}
-            <Link href="/Gokul--Resume.pdf" target="_blank" rel="noopener noreferrer" download="Gokul--Resume.pdf">
+            <Link href="/Gokul-Resume.pdf" target="_blank" rel="noopener noreferrer" download="Gokul-Resume.pdf">
               <Download className="mr-2 h-5 w-5" />
               Download Resume
             </Link>
