@@ -1,3 +1,4 @@
+
 import SectionContainer from '@/components/shared/section-container';
 import { Card, CardContent } from '@/components/ui/card';
 import { BookMarked } from 'lucide-react';
@@ -22,7 +23,12 @@ const CertificationsSection = () => {
                   <span className="font-medium">{cert.name}</span>
                   <span className="text-muted-foreground text-sm"> - {' '}
                     {cert.link ? (
-                      <Link href={cert.link} target="_blank" rel="noopener noreferrer" className="font-medium underline text-[hsl(var(--highlight-yellow))]">
+                      <Link
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium underline text-[hsl(var(--highlight-yellow))] hover:brightness-110 hover:underline-offset-4 transition-all duration-200 ease-in-out"
+                      >
                         {cert.issuerLogo}
                       </Link>
                     ) : (
