@@ -123,13 +123,11 @@ body {
     --star-opacity-small: 0.5;
     --star-opacity-medium: 0.7;
 
-    /* Removed background-color: hsl(var(--background)); from here */
     color: hsl(var(--foreground)); /* Text color for dark mode */
     
     position: relative; /* Ensure stacking context for pseudo-elements */
     overflow-x: hidden; /* Prevent scrollbars from animation if it briefly extends */
     
-    /* Star background and animation moved to ::before pseudo-element */
     &::before {
       content: '';
       position: fixed;
@@ -152,18 +150,15 @@ body {
         150px 150px, /* Tile size for medium stars */
         auto;        /* Nebula gradient covers full element */
 
-      background-position:
+      background-position: /* Initial positions */
         0 0,         /* Tiny stars */
         25px 25px,   /* Small stars - offset from tiny */
         50px 50px,   /* Medium stars - further offset */
         center center; /* Nebula gradient */
 
-      /* All layers repeat as needed; nebula will cover once due to 'auto' size and 'no-repeat' */
       background-repeat: repeat, repeat, repeat, no-repeat;
       
-      /* background-attachment is implicitly 'fixed' due to position:fixed on the pseudo-element */
-
-      animation: moveStars 20s linear infinite; /* Apply star drifting animation - sped up from 120s */
+      animation: moveStars 20s linear infinite;
     }
 
     /* Shooting Star Styles */
@@ -205,20 +200,20 @@ body {
   }
 }
 
-/* Keyframes for drifting stars */
+/* Keyframes for drifting stars - MODIFIED TO TEST ONE LAYER */
 @keyframes moveStars {
   0% {
-    background-position: 
-      0 0,        /* Tiny stars */
-      25px 25px,  /* Small stars */
-      50px 50px,  /* Medium stars */
+    background-position:
+      0 0,         /* Tiny stars - will be animated */
+      25px 25px,   /* Small stars - kept static for test */
+      50px 50px,   /* Medium stars - kept static for test */
       center center; /* Nebula gradient - remains static */
   }
   100% {
-    background-position: 
-      50px 0,       /* Tiny stars - drift right (loops with 50px tile) */
-      25px 125px,   /* Small stars - drift down (loops with 100px tile) */
-      200px 50px,   /* Medium stars - drift right (loops with 150px tile) */
+    background-position:
+      50px 0,      /* Tiny stars - new position (drifts one tile width to the right) */
+      25px 25px,   /* Small stars - kept static for test */
+      50px 50px,   /* Medium stars - kept static for test */
       center center; /* Nebula gradient - remains static */
   }
 }
