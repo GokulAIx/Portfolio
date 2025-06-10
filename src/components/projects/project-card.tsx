@@ -20,7 +20,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, imageUrl, imageHint, githubLink, demoLink }) => {
   return (
     <Card className={cn(
-      "group flex flex-col h-full overflow-hidden shadow-lg hover:scale-105 transition-all duration-300 project-card-animated-fire-hover"
+      "group flex flex-col h-full overflow-hidden shadow-lg hover:scale-105 transition-all duration-300 project-card-animated-dark-energy-hover"
     )}>
       <CardHeader>
         <div className="relative w-full h-48 mb-4 rounded-t-md overflow-hidden">
@@ -73,3 +73,5 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
 };
 
 export default ProjectCard;
+
+    
