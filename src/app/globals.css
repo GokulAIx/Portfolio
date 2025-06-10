@@ -140,9 +140,9 @@ body {
         radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-small)) 1px, transparent 1px),
         radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-medium)) 1.5px, transparent 1.5px),
         /* Subtle Nebula/Dust - these do not repeat */
-        radial-gradient(ellipse at center, hsla(270, 50%, 8%, 0.08) 0%, hsla(270, 50%, 4%, 0.04) 40%, transparent 70%),
-        radial-gradient(ellipse at 20% 30%, hsla(220, 50%, 10%, 0.08) 0%, hsla(220, 50%, 5%, 0.04) 35%, transparent 65%),
-        radial-gradient(ellipse at 80% 70%, hsla(240, 50%, 12%, 0.08) 0%, hsla(240, 50%, 6%, 0.04) 35%, transparent 65%),
+        radial-gradient(ellipse at center, hsla(270, 40%, 15%, 0.12) 0%, hsla(270, 40%, 10%, 0.06) 40%, transparent 70%),
+        radial-gradient(ellipse at 20% 30%, hsla(220, 40%, 18%, 0.12) 0%, hsla(220, 40%, 12%, 0.06) 35%, transparent 65%),
+        radial-gradient(ellipse at 80% 70%, hsla(240, 40%, 20%, 0.12) 0%, hsla(240, 40%, 15%, 0.06) 35%, transparent 65%),
         /* Base Black Background */
         linear-gradient(#000000, #000000);
 
@@ -209,66 +209,25 @@ body {
   }
 }
 
-/* @keyframes moveStars - definition can be kept or removed as it's not applied */
 @keyframes moveStars {
   0% {
-    background-position:
-      0 0,
-      25px 25px,
-      50px 50px,
-      center center, /* Nebula 1 */
-      20% 30%,      /* Nebula 2 */
-      80% 70%,      /* Nebula 3 */
-      center center; /* Solid black */
+    transform: translateX(0px) translateY(0px);
   }
   20% {
-    background-position:
-      10px 20px,   /* Tiny stars move */
-      45px 15px,   /* Small stars move differently */
-      30px 60px,   /* Medium stars move differently */
-      center center, /* Nebula 1 */
-      20% 30%,      /* Nebula 2 */
-      80% 70%,      /* Nebula 3 */
-      center center; /* Solid black */
+    transform: translateX(-10px) translateY(20px);
   }
   40% {
-    background-position:
-      -15px 30px,
-      15px 50px,
-      60px 20px,
-      center center, /* Nebula 1 */
-      20% 30%,      /* Nebula 2 */
-      80% 70%,      /* Nebula 3 */
-      center center; /* Solid black */
+    transform: translateX(15px) translateY(-30px);
   }
   60% {
-    background-position:
-      20px -10px,
-      5px 5px,
-      40px 45px,
-      center center, /* Nebula 1 */
-      20% 30%,      /* Nebula 2 */
-      80% 70%,      /* Nebula 3 */
-      center center; /* Solid black */
+    transform: translateX(-20px) translateY(-10px);
   }
   80% {
-    background-position:
-      -5px 10px,
-      30px 35px,
-      10px 5px,
-      center center, /* Nebula 1 */
-      20% 30%,      /* Nebula 2 */
-      80% 70%,      /* Nebula 3 */
-      center center; /* Solid black */
+    transform: translateX(5px) translateY(10px);
   }
   100% {
-    background-position:
-      0 0,
-      25px 25px,
-      50px 50px,
-      center center, /* Nebula 1 */
-      20% 30%,      /* Nebula 2 */
-      80% 70%,      /* Nebula 3 */
-      center center; /* Solid black */
+    transform: translateX(0px) translateY(0px);
   }
 }
+
+    
