@@ -157,8 +157,8 @@ body {
 
       background-position:
         0 0,         /* Tiny stars */
-        25px 25px,   /* Small stars - offset */
-        50px 50px,   /* Medium stars - further offset */
+        37px 13px,   /* Small stars - more random offset */
+        83px 61px,   /* Medium stars - even more random offset */
         center center, /* Nebula 1 */
         20% 30%,      /* Nebula 2 */
         80% 70%,      /* Nebula 3 */
@@ -229,5 +229,3 @@ body {
     transform: translateX(0px) translateY(0px);
   }
 }
-
-    
