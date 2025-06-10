@@ -31,12 +31,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
           />
         </div>
         <CardTitle className="text-xl font-semibold font-headline">{title}</CardTitle>
-        <CardDescription className="text-sm text-muted-foreground min-h-[3rem] rounded-md p-1 -m-1 transition-all duration-300 group-hover:ring-2 group-hover:ring-primary/60">
+        <CardDescription className="text-sm text-muted-foreground min-h-[3rem] rounded-md p-1 -m-1 transition-all duration-300 group-hover:ring-2 group-hover:ring-[hsl(var(--highlight-yellow)/0.6)]">
           {description}
         </CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        <div className="mb-4 rounded-md p-2 -m-2 transition-all duration-300 group-hover:ring-2 group-hover:ring-primary/60">
+        <div className="mb-4 rounded-md p-2 -m-2 transition-all duration-300 group-hover:ring-2 group-hover:ring-[hsl(var(--highlight-yellow)/0.6)]">
           <h4 className="text-xs font-semibold uppercase text-muted-foreground mb-2">Tech Used:</h4>
           <div className="flex flex-wrap gap-2">
             {tools.map((tool) => (
