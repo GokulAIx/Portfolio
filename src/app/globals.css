@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -122,45 +123,48 @@ body {
     --star-opacity-small: 0.5;
     --star-opacity-medium: 0.7;
 
-    background-color: hsl(var(--background)); /* Base solid color, very dark */
-
-    /* Star layers on top, then nebula gradient */
-    background-image:
-      /* Tiny stars - high density pattern, low opacity */
-      radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-tiny)) 0.5px, transparent 0.5px),
-      /* Small stars - medium density pattern, medium opacity */
-      radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-small)) 1px, transparent 1px),
-      /* Medium stars - low density pattern, higher opacity */
-      radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-medium)) 1.5px, transparent 1.5px),
-      /* Nebula gradient - behind the stars */
-      linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--accent-nebula)), hsl(var(--background)));
-
-    background-size:
-      50px 50px,  /* Tile size for tiny stars */
-      100px 100px, /* Tile size for small stars */
-      150px 150px, /* Tile size for medium stars */
-      auto;        /* Nebula gradient covers full element */
-
-    /* Offset positions for each star layer to break up the grid look */
-    /* This will be animated by moveStars */
-    background-position:
-      0 0,         /* Tiny stars */
-      25px 25px,   /* Small stars - offset from tiny */
-      50px 50px,   /* Medium stars - further offset */
-      center center; /* Nebula gradient */
-
-    /* Star layers repeat to fill, nebula does not */
-    background-repeat: repeat, repeat, repeat, no-repeat;
-    
-    /* Star layers are fixed, nebula scrolls */
-    background-attachment: fixed, fixed, fixed, scroll;
-
+    background-color: hsl(var(--background)); /* Base solid color for the body */
     color: hsl(var(--foreground)); /* Text color for dark mode */
     
     position: relative; /* Ensure stacking context for pseudo-elements */
     overflow-x: hidden; /* Prevent scrollbars from animation if it briefly extends */
+    
+    /* Star background and animation moved to ::before pseudo-element */
+    &::before {
+      content: '';
+      position: fixed;
+      inset: 0; /* top, right, bottom, left = 0 */
+      z-index: -1; /* Behind body content */
 
-    animation: moveStars 120s linear infinite; /* Apply star drifting animation */
+      background-image:
+        /* Tiny stars - high density pattern, low opacity */
+        radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-tiny)) 0.5px, transparent 0.5px),
+        /* Small stars - medium density pattern, medium opacity */
+        radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-small)) 1px, transparent 1px),
+        /* Medium stars - low density pattern, higher opacity */
+        radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-medium)) 1.5px, transparent 1.5px),
+        /* Nebula gradient - behind the stars */
+        linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--accent-nebula)), hsl(var(--background)));
+
+      background-size:
+        50px 50px,  /* Tile size for tiny stars */
+        100px 100px, /* Tile size for small stars */
+        150px 150px, /* Tile size for medium stars */
+        auto;        /* Nebula gradient covers full element */
+
+      background-position:
+        0 0,         /* Tiny stars */
+        25px 25px,   /* Small stars - offset from tiny */
+        50px 50px,   /* Medium stars - further offset */
+        center center; /* Nebula gradient */
+
+      /* All layers repeat as needed; nebula will cover once due to 'auto' size and 'no-repeat' */
+      background-repeat: repeat, repeat, repeat, no-repeat;
+      
+      /* background-attachment is implicitly 'fixed' due to position:fixed on the pseudo-element */
+
+      animation: moveStars 120s linear infinite; /* Apply star drifting animation */
+    }
 
     /* Shooting Star Styles */
     &::after {
@@ -176,7 +180,7 @@ body {
       transform-origin: left center; /* Rotate around the "head" (left side of the streak) */
       animation: shootingStarAnimation 8s linear infinite; /* 8s duration, linear motion, repeats infinitely */
       animation-delay: 2s; /* Delay before the first animation cycle */
-      z-index: 0; /* Keep it in the background layer, above other body backgrounds but below actual page content */
+      z-index: 0; /* Above ::before star background, below main page content */
     }
   }
 }
@@ -218,3 +222,5 @@ body {
       center center; /* Nebula gradient - remains static */
   }
 }
+
+    
