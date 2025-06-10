@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import SectionContainer from '@/components/shared/section-container';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 // Simple X logo SVG
 const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -79,7 +80,11 @@ const LandingSection = () => {
             alt="Progress Bar Visual"
             width={400}
             height={400}
-            className="rounded-lg shadow-xl object-cover"
+            className={cn(
+              "object-cover contact-form-fire-border" 
+              // Note: contact-form-fire-border applies rounded-xl (0.75rem)
+              // Original rounded-lg (0.5rem) and shadow-xl are removed
+            )}
             data-ai-hint="progress analytics"
             unoptimized={true} 
           />
