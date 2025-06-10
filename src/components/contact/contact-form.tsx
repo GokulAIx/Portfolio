@@ -11,6 +11,7 @@ from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Send, Loader2 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -46,7 +47,14 @@ const ContactForm = () => {
   }, [state, toast]);
 
   return (
-    <form ref={formRef} action={formAction} className="space-y-6 max-w-lg mx-auto bg-card p-6 sm:p-8 rounded-xl shadow-xl">
+    <form 
+      ref={formRef} 
+      action={formAction} 
+      className={cn(
+        "space-y-6 max-w-lg mx-auto bg-card p-6 sm:p-8 rounded-xl",
+        "contact-form-fire-border" // Added class for fire effect, removed shadow-xl
+      )}
+    >
       <div>
         <Label htmlFor="name" className="block text-sm font-medium mb-1">Full Name</Label>
         <Input id="name" name="name" type="text" autoComplete="name" required aria-describedby="name-error" />
