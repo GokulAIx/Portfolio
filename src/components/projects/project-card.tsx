@@ -5,6 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription }
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Github, ExternalLink } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface ProjectCardProps {
   title: string;
@@ -18,7 +19,9 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, imageUrl, imageHint, githubLink, demoLink }) => {
   return (
-    <Card className="group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+    <Card className={cn(
+      "group flex flex-col h-full overflow-hidden shadow-lg hover:scale-105 transition-all duration-300 project-card-animated-fire-hover"
+    )}>
       <CardHeader>
         <div className="relative w-full h-48 mb-4 rounded-t-md overflow-hidden">
           <Image
