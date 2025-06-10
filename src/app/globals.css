@@ -115,7 +115,7 @@ body {
     @apply border-border;
   }
   body {
-    @apply text-foreground; /* Default for light mode - background removed */
+    @apply text-foreground; 
     min-height: 100vh;
   }
   html.dark body {
@@ -123,103 +123,117 @@ body {
     --star-opacity-small: 0.8;
     --star-opacity-medium: 0.9;
 
-    color: hsl(var(--foreground)); /* Text color for dark mode */
+    color: hsl(var(--foreground)); 
     
-    position: relative; /* Ensure stacking context for pseudo-elements */
-    overflow-x: hidden; /* Prevent scrollbars from animation if it briefly extends */
+    position: relative; 
+    overflow-x: hidden; 
     
     &::before {
       content: '';
       position: fixed;
-      inset: 0; /* top, right, bottom, left = 0 */
-      z-index: -1; /* Behind body content */
+      inset: 0; 
+      z-index: -1; 
 
       background-image:
-        /* Tiny stars - high density pattern */
         radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-tiny)) 0.5px, transparent 0.5px),
-        /* Small stars - medium density pattern */
         radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-small)) 1px, transparent 1px),
-        /* Medium stars - low density pattern */
         radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-medium)) 1.5px, transparent 1.5px),
-        /* Solid Pure Black Background Layer */
         linear-gradient(#000000, #000000);
 
 
       background-size:
-        50px 50px,  /* Tile size for tiny stars */
-        100px 100px, /* Tile size for small stars */
-        150px 150px, /* Tile size for medium stars */
-        auto;        /* Solid background covers full element */
+        50px 50px,  
+        100px 100px, 
+        150px 150px, 
+        auto;        
 
-      background-position: /* Initial positions */
-        0 0,         /* Tiny stars */
-        25px 25px,   /* Small stars - offset from tiny */
-        50px 50px,   /* Medium stars - further offset */
-        center center; /* Solid background */
+      background-position: 
+        0 0,         
+        25px 25px,   
+        50px 50px,   
+        center center; 
 
       background-repeat: repeat, repeat, repeat, no-repeat;
-      /* animation: moveStars 3s linear infinite; */ /* Static stars animation is off */
+      animation: moveStars 30s linear infinite; 
     }
 
-    /* Shooting Star Styles */
     &::after {
       content: '';
-      position: fixed; /* Relative to viewport to streak across the whole screen */
-      top: 0; /* Initial Y position for transform */
-      left: 0; /* Initial X position for transform */
-      width: 200px;  /* Length of the star trail */
-      height: 2px;   /* Thickness of the trail */
-      background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* White head fading to transparent tail on the right */
-      border-radius: 1px; /* Slightly rounded ends for the streak */
-      opacity: 0; /* Start invisible */
-      transform-origin: left center; /* Rotate around the "head" (left side of the streak) */
-      animation: shootingStarAnimation 8s linear infinite; /* 8s duration, linear motion, repeats infinitely */
-      animation-delay: 2s; /* Delay before the first animation cycle */
-      z-index: 0; /* Above ::before star background, below main page content */
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 200px;  
+      height: 2px;   
+      background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); 
+      border-radius: 1px; 
+      opacity: 0; 
+      transform-origin: left center; 
+      animation: shootingStarAnimation 8s linear infinite; 
+      animation-delay: 2s; 
+      z-index: 0; 
     }
   }
 }
 
-/* Keyframes for the shooting star - defined globally */
 @keyframes shootingStarAnimation {
   0% {
-    /* Start position: top-right of viewport, angled towards bottom-left */
     transform: translateX(100vw) translateY(-50px) rotate(-30deg);
     opacity: 0;
   }
-  10% { /* Star appears */
+  10% { 
     opacity: 1;
   }
-  90% { /* Star still visible before disappearing */
+  90% { 
     opacity: 1;
   }
   100% {
-    /* End position: bottom-left of viewport, after crossing */
-    transform: translateX(-250px) translateY(100vh) rotate(-30deg); /* -250px to ensure tail is off-screen */
+    transform: translateX(-250px) translateY(100vh) rotate(-30deg); 
     opacity: 0;
   }
 }
 
-/* Keyframes for drifting star layers using background-position or transform */
-/* This animation is currently NOT applied to any element */
 @keyframes moveStars {
   0% {
-    transform: translateX(0px) translateY(0px);
+    background-position:
+      0 0,       
+      25px 25px,  
+      50px 50px,  
+      center center; 
   }
   20% {
-    transform: translateX(-20px) translateY(15px);
+    background-position:
+      10px 20px,   /* Tiny stars move */
+      45px 15px,   /* Small stars move differently */
+      30px 60px,   /* Medium stars move differently */
+      center center; /* Solid background stays */
   }
   40% {
-    transform: translateX(25px) translateY(-25px);
+    background-position:
+      -15px 30px,
+      15px 50px,
+      60px 20px,
+      center center;
   }
   60% {
-    transform: translateX(-25px) translateY(-10px);
+    background-position:
+      20px -10px,
+      5px 5px,   
+      40px 45px,
+      center center;
   }
   80% {
-    transform: translateX(15px) translateY(20px);
+    background-position:
+      -5px 10px,
+      30px 35px, 
+      10px 5px,
+      center center;
   }
   100% {
-    transform: translateX(0px) translateY(0px); /* Returns to start */
+    background-position:
+      0 0,       
+      25px 25px,  
+      50px 50px,  
+      center center; 
   }
 }
     
