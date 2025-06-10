@@ -115,7 +115,7 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground; /* Default for light mode */
+    @apply text-foreground; /* Default for light mode - background removed */
     min-height: 100vh;
   }
   html.dark body {
@@ -200,20 +200,12 @@ body {
   }
 }
 
-/* Keyframes for drifting stars - MODIFIED TO TEST ONE LAYER */
+/* Keyframes for drifting stars - using transform */
 @keyframes moveStars {
   0% {
-    background-position:
-      0 0,         /* Tiny stars - will be animated */
-      25px 25px,   /* Small stars - kept static for test */
-      50px 50px,   /* Medium stars - kept static for test */
-      center center; /* Nebula gradient - remains static */
+    transform: translateX(0px);
   }
   100% {
-    background-position:
-      50px 0,      /* Tiny stars - new position (drifts one tile width to the right) */
-      25px 25px,   /* Small stars - kept static for test */
-      50px 50px,   /* Medium stars - kept static for test */
-      center center; /* Nebula gradient - remains static */
+    transform: translateX(-50px); /* Moves all layers left by 50px */
   }
 }
