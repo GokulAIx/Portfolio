@@ -27,7 +27,7 @@ const CertificationsSection = () => {
                         href={cert.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-medium underline text-[hsl(var(--highlight-yellow))] hover:brightness-110 hover:underline-offset-4 transition-all duration-200 ease-in-out"
+                        className="font-medium underline text-[hsl(var(--highlight-yellow))] hover:text-[hsl(50,100%,70%)] hover:underline-offset-4 transition-all duration-200 ease-in-out"
                       >
                         {cert.issuerLogo}
                       </Link>
