@@ -119,9 +119,9 @@ body {
     min-height: 100vh;
   }
   html.dark body {
-    --star-opacity-tiny: 0.05; /* Further Reduced */
-    --star-opacity-small: 0.1;  /* Further Reduced */
-    --star-opacity-medium: 0.15; /* Further Reduced */
+    --star-opacity-tiny: 0.7;
+    --star-opacity-small: 0.8;
+    --star-opacity-medium: 0.9;
 
     color: hsl(var(--foreground)); /* Text color for dark mode */
     
@@ -141,24 +141,24 @@ body {
         radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-small)) 1px, transparent 1px),
         /* Medium stars - low density pattern, higher opacity */
         radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-medium)) 1.5px, transparent 1.5px),
-        /* Nebula gradient - behind the stars, starts and ends with var(--background) */
-        linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--accent-nebula)), hsl(var(--background)));
+        /* Solid Dark Background Layer */
+        linear-gradient(hsl(var(--background)), hsl(var(--background)));
+
 
       background-size:
         50px 50px,  /* Tile size for tiny stars */
         100px 100px, /* Tile size for small stars */
         150px 150px, /* Tile size for medium stars */
-        auto;        /* Nebula gradient covers full element */
+        auto;        /* Solid background covers full element */
 
       background-position: /* Initial positions */
         0 0,         /* Tiny stars */
         25px 25px,   /* Small stars - offset from tiny */
         50px 50px,   /* Medium stars - further offset */
-        center center; /* Nebula gradient */
+        center center; /* Solid background */
 
       background-repeat: repeat, repeat, repeat, no-repeat;
       
-      /* animation: moveStars 30s linear infinite; -- This line is intentionally kept commented or removed to stop the static star animation */
     }
 
     /* Shooting Star Styles */
