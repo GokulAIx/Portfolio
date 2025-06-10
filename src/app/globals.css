@@ -119,9 +119,9 @@ body {
     min-height: 100vh;
   }
   html.dark body {
-    --star-opacity-tiny: 0.15; /* Further Reduced */
-    --star-opacity-small: 0.3;  /* Further Reduced */
-    --star-opacity-medium: 0.5; /* Further Reduced */
+    --star-opacity-tiny: 0.05; /* Further Reduced */
+    --star-opacity-small: 0.1;  /* Further Reduced */
+    --star-opacity-medium: 0.15; /* Further Reduced */
 
     color: hsl(var(--foreground)); /* Text color for dark mode */
     
@@ -150,7 +150,7 @@ body {
         150px 150px, /* Tile size for medium stars */
         auto;        /* Nebula gradient covers full element */
 
-      background-position: /* Initial positions, will be animated */
+      background-position: /* Initial positions */
         0 0,         /* Tiny stars */
         25px 25px,   /* Small stars - offset from tiny */
         50px 50px,   /* Medium stars - further offset */
@@ -158,7 +158,7 @@ body {
 
       background-repeat: repeat, repeat, repeat, no-repeat;
       
-      /* animation: moveStars 30s linear infinite; */ /* Animation stopped */
+      /* animation: moveStars 30s linear infinite; -- This line is intentionally kept commented or removed to stop the static star animation */
     }
 
     /* Shooting Star Styles */
@@ -200,7 +200,7 @@ body {
   }
 }
 
-/* Keyframes for drifting star layers using background-position */
+/* Keyframes for drifting star layers using background-position - This definition can remain, it's just not applied. */
 @keyframes moveStars {
   0% {
     background-position: 0 0, 25px 25px, 50px 50px, center center;
@@ -221,4 +221,4 @@ body {
     background-position: 0 0, 25px 25px, 50px 50px, center center; /* Returns to start */
   }
 }
-
+    
