@@ -158,7 +158,7 @@ body {
 
       background-repeat: repeat, repeat, repeat, no-repeat;
       
-      animation: moveStars 5s linear infinite; /* Faster animation */
+      animation: moveStars 3s linear infinite; /* Even Faster animation */
     }
 
     /* Shooting Star Styles */
@@ -205,16 +205,20 @@ body {
   0% {
     transform: translate(0px, 0px);
   }
-  25% {
-    transform: translate(-15px, 10px); /* Moves diagonally: down-left */
+  20% {
+    transform: translate(-10px, 8px);   /* down-leftish */
   }
-  50% {
-    transform: translate(5px, -15px);  /* Moves diagonally: up-right */
+  40% {
+    transform: translate(12px, -15px);  /* up-rightish */
   }
-  75% {
-    transform: translate(-20px, -5px); /* Moves diagonally: up-left */
+  60% {
+    transform: translate(-15px, -5px);  /* up-leftish */
+  }
+  80% {
+    transform: translate(8px, 10px);    /* down-rightish */
   }
   100% {
     transform: translate(0px, 0px); /* Returns to start for a looping "dance" */
   }
 }
+
