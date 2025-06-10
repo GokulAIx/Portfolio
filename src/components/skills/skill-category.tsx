@@ -1,6 +1,7 @@
 import type React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
 
 interface SkillCategoryProps {
   title: string;
@@ -10,7 +11,10 @@ interface SkillCategoryProps {
 
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills, icon }) => {
   return (
-    <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-secondary">
+    <Card className={cn(
+      "shadow-lg bg-secondary",
+      "skill-card-animated-fire-hover" // Added class for fire hover effect
+    )}>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-xl font-semibold font-headline">{title}</CardTitle>
         {icon && <div className="text-primary">{icon}</div>}
