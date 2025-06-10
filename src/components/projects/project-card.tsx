@@ -9,7 +9,7 @@ import { Github, ExternalLink } from 'lucide-react';
 interface ProjectCardProps {
   title: string;
   description: string;
-  tools: string[]; // Keep prop name as tools for broader reusability, label is changed
+  tools: string[];
   imageUrl: string;
   imageHint: string;
   githubLink?: string;
@@ -18,7 +18,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, imageUrl, imageHint, githubLink, demoLink }) => {
   return (
-    <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+    <Card className="group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
       <CardHeader>
         <div className="relative w-full h-48 mb-4 rounded-t-md overflow-hidden">
           <Image
@@ -27,14 +27,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
             fill={true}
             style={{ objectFit: 'cover' }}
             data-ai-hint={imageHint}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Provide sizes for responsive images with fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <CardTitle className="text-xl font-semibold font-headline">{title}</CardTitle>
-        <CardDescription className="text-sm text-muted-foreground min-h-[3rem]">{description}</CardDescription>
+        <CardDescription className="text-sm text-muted-foreground min-h-[3rem] rounded-md p-1 -m-1 transition-all duration-300 group-hover:ring-2 group-hover:ring-primary/60">
+          {description}
+        </CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        <div className="mb-4">
+        <div className="mb-4 rounded-md p-2 -m-2 transition-all duration-300 group-hover:ring-2 group-hover:ring-primary/60">
           <h4 className="text-xs font-semibold uppercase text-muted-foreground mb-2">Tech Used:</h4>
           <div className="flex flex-wrap gap-2">
             {tools.map((tool) => (
