@@ -142,6 +142,7 @@ body {
       auto;        /* Nebula gradient covers full element */
 
     /* Offset positions for each star layer to break up the grid look */
+    /* This will be animated by moveStars */
     background-position:
       0 0,         /* Tiny stars */
       25px 25px,   /* Small stars - offset from tiny */
@@ -158,6 +159,8 @@ body {
     
     position: relative; /* Ensure stacking context for pseudo-elements */
     overflow-x: hidden; /* Prevent scrollbars from animation if it briefly extends */
+
+    animation: moveStars 120s linear infinite; /* Apply star drifting animation */
 
     /* Shooting Star Styles */
     &::after {
@@ -195,5 +198,23 @@ body {
     /* End position: bottom-left of viewport, after crossing */
     transform: translateX(-250px) translateY(100vh) rotate(-30deg); /* -250px to ensure tail is off-screen */
     opacity: 0;
+  }
+}
+
+/* Keyframes for drifting stars */
+@keyframes moveStars {
+  0% {
+    background-position: 
+      0 0,        /* Tiny stars */
+      25px 25px,  /* Small stars */
+      50px 50px,  /* Medium stars */
+      center center; /* Nebula gradient - remains static */
+  }
+  100% {
+    background-position: 
+      50px 0,       /* Tiny stars - drift right (loops with 50px tile) */
+      25px 125px,   /* Small stars - drift down (loops with 100px tile) */
+      200px 50px,   /* Medium stars - drift right (loops with 150px tile) */
+      center center; /* Nebula gradient - remains static */
   }
 }
