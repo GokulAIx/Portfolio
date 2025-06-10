@@ -158,7 +158,7 @@ body {
 
       background-repeat: repeat, repeat, repeat, no-repeat;
       
-      animation: moveStars 20s linear infinite;
+      animation: moveStars 15s linear infinite; /* Updated duration */
     }
 
     /* Shooting Star Styles */
@@ -203,9 +203,10 @@ body {
 /* Keyframes for drifting stars - using transform */
 @keyframes moveStars {
   0% {
-    transform: translateX(0px);
+    transform: translate(0px, 0px);
   }
   100% {
-    transform: translateX(-50px); /* Moves all layers left by 50px */
+    transform: translate(-40px, -20px); /* Moves diagonally: 40px left, 20px up */
   }
 }
+
