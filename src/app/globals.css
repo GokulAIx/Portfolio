@@ -107,6 +107,10 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     --highlight-yellow: 50 98% 64%; /* Bright Yellow for Dark e.g., Tailwind yellow-400 #fde047 */
+    
+    --star-opacity-tiny: 0.7;
+    --star-opacity-small: 0.8;
+    --star-opacity-medium: 0.9;
   }
 }
 
@@ -119,12 +123,7 @@ body {
     min-height: 100vh;
   }
   html.dark body {
-    --star-opacity-tiny: 0.7;
-    --star-opacity-small: 0.8;
-    --star-opacity-medium: 0.9;
-
     color: hsl(var(--foreground));
-
     position: relative;
     overflow-x: hidden;
 
@@ -147,9 +146,9 @@ body {
         linear-gradient(#000000, #000000);
 
       background-size:
-        50px 50px,   /* Tiny stars */
-        100px 100px, /* Small stars */
-        150px 150px, /* Medium stars */
+        100px 100px,   /* Tiny stars - Increased size */
+        200px 200px, /* Small stars - Increased size */
+        300px 300px, /* Medium stars - Increased size */
         100vw 100vh, /* Nebula 1 */
         80vw 80vh,   /* Nebula 2 */
         90vw 90vh,   /* Nebula 3 */
@@ -172,6 +171,7 @@ body {
         no-repeat,   /* Nebula 2 */
         no-repeat,   /* Nebula 3 */
         no-repeat;   /* Solid black */
+      /* animation: moveStars 30s linear infinite; */ /* Star animation is off */
     }
 
     &::after {
@@ -209,23 +209,42 @@ body {
   }
 }
 
+/*
 @keyframes moveStars {
   0% {
-    transform: translateX(0px) translateY(0px);
+    background-position: 
+      0 0,
+      37px 13px,
+      83px 61px,
+      center center, center center, center center, center center;
   }
-  20% {
-    transform: translateX(-10px) translateY(20px);
+  25% {
+    background-position: 
+      10px -5px,    
+      42px 23px,   
+      70px 50px,    
+      center center, center center, center center, center center;
   }
-  40% {
-    transform: translateX(15px) translateY(-30px);
+  50% {
+    background-position: 
+      -5px 15px,   
+      25px 5px,    
+      90px 75px,  
+      center center, center center, center center, center center;
   }
-  60% {
-    transform: translateX(-20px) translateY(-10px);
-  }
-  80% {
-    transform: translateX(5px) translateY(10px);
+  75% {
+    background-position: 
+      15px -10px,   
+      50px 30px,   
+      60px 40px,    
+      center center, center center, center center, center center;
   }
   100% {
-    transform: translateX(0px) translateY(0px);
+    background-position: 
+      0 0,
+      37px 13px,
+      83px 61px,
+      center center, center center, center center, center center;
   }
 }
+*/
