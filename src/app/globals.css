@@ -163,7 +163,7 @@ body {
       
       /* background-attachment is implicitly 'fixed' due to position:fixed on the pseudo-element */
 
-      animation: moveStars 120s linear infinite; /* Apply star drifting animation */
+      animation: moveStars 20s linear infinite; /* Apply star drifting animation - sped up from 120s */
     }
 
     /* Shooting Star Styles */
@@ -222,5 +222,7 @@ body {
       center center; /* Nebula gradient - remains static */
   }
 }
+
+    
 
     
