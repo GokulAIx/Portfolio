@@ -123,7 +123,7 @@ body {
     --star-opacity-small: 0.5;
     --star-opacity-medium: 0.7;
 
-    background-color: hsl(var(--background)); /* Base solid color for the body */
+    /* Removed background-color: hsl(var(--background)); from here */
     color: hsl(var(--foreground)); /* Text color for dark mode */
     
     position: relative; /* Ensure stacking context for pseudo-elements */
@@ -134,7 +134,7 @@ body {
       content: '';
       position: fixed;
       inset: 0; /* top, right, bottom, left = 0 */
-      z-index: -1; /* Behind body content */
+      z-index: -1; /* Behind body content, will be visible if body has no bg */
 
       background-image:
         /* Tiny stars - high density pattern, low opacity */
@@ -143,7 +143,7 @@ body {
         radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-small)) 1px, transparent 1px),
         /* Medium stars - low density pattern, higher opacity */
         radial-gradient(hsla(0, 0%, 95%, var(--star-opacity-medium)) 1.5px, transparent 1.5px),
-        /* Nebula gradient - behind the stars */
+        /* Nebula gradient - behind the stars, starts and ends with var(--background) */
         linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--accent-nebula)), hsl(var(--background)));
 
       background-size:
@@ -222,7 +222,3 @@ body {
       center center; /* Nebula gradient - remains static */
   }
 }
-
-    
-
-    
