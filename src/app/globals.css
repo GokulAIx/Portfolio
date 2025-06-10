@@ -146,9 +146,9 @@ body {
         linear-gradient(#000000, #000000);
 
       background-size:
-        100px 100px,   /* Tiny stars - Increased size */
-        200px 200px, /* Small stars - Increased size */
-        300px 300px, /* Medium stars - Increased size */
+        50px 50px,   /* Tiny stars */
+        100px 100px, /* Small stars */
+        150px 150px, /* Medium stars */
         100vw 100vh, /* Nebula 1 */
         80vw 80vh,   /* Nebula 2 */
         90vw 90vh,   /* Nebula 3 */
@@ -171,7 +171,7 @@ body {
         no-repeat,   /* Nebula 2 */
         no-repeat,   /* Nebula 3 */
         no-repeat;   /* Solid black */
-      /* animation: moveStars 30s linear infinite; */ /* Star animation is off */
+      /* animation: moveStars 30s linear infinite; */ /* Static stars, animation off */
     }
 
     &::after {
