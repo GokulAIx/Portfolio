@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   title: 'Gokul.AI - Personal Portfolio',
   description: 'Personal portfolio of Gokul Sree Chandra, an AI/ML and NLP enthusiast.',
   icons: {
-    icon: '/GokulAIx.png', // Path relative to the public folder
-    apple: '/GokulAIx.png', // For Apple devices
+    icon: '/Logo.png', // Path relative to the public folder
+    apple: '/Logo.png', // For Apple devices
   },
 };
 
