@@ -35,7 +35,7 @@ const LandingSection = () => {
             />
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-3 font-headline">
-            Gokul Sree Chandra <span className="text-2xl sm:text-3xl text-primary/90 font-medium">@GokulAIx</span>
+           P Gokul Sree Chandra <span className="text-2xl sm:text-3xl text-primary/90 font-medium">@GokulAIx</span>
           </h1>
           <div className="flex flex-col items-center md:items-start mb-4">
             <p className="flex items-center gap-2 text-lg sm:text-xl text-primary">
