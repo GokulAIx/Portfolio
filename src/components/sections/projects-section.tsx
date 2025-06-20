@@ -10,7 +10,7 @@ const projectsData = [
     imageUrl: "/Sentiment-Analysis.jpg",
     imageHint: "text analysis",
     githubLink: "https://github.com/Gokul-sc/PROJECTS",
-    demoLink: "#", // Added placeholder demo link
+    demoLink: "https://gokulaix-sentiment-analysis.streamlit.app/",
   },
   {
     title: "SkillCheck – AI Skill Evaluator",
