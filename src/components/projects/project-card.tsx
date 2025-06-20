@@ -51,11 +51,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
         </div>
       </CardContent>
       <CardFooter className="mt-auto pt-0">
-        <div className="flex gap-2 w-full">
+        <div className="flex flex-col gap-2 w-full">
           {demoLink && (
             <Button variant="default" size="sm" asChild className="flex-1">
               <Link href={demoLink} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-2 h-4 w-4" /> Demo
+                <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
               </Link>
             </Button>
           )}
@@ -73,5 +73,3 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
 };
 
 export default ProjectCard;
-
-    

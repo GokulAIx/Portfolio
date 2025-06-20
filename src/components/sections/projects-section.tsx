@@ -10,6 +10,7 @@ const projectsData = [
     imageUrl: "/Sentiment-Analysis.jpg",
     imageHint: "text analysis",
     githubLink: "https://github.com/Gokul-sc/PROJECTS",
+    demoLink: "#", // Added placeholder demo link
   },
   {
     title: "SkillCheck – AI Skill Evaluator",
@@ -18,6 +19,7 @@ const projectsData = [
     imageUrl: "/SkillCheck.png",
     imageHint: "skills assessment",
     githubLink: "https://github.com/Gokul-sc/SkillCheck",
+    // You can add a demoLink here too if available, e.g., demoLink: "#"
   },
 ];
 
