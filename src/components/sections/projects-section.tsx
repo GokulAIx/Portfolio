@@ -19,7 +19,6 @@ const projectsData = [
     imageUrl: "/SkillCheck.png",
     imageHint: "skills assessment",
     githubLink: "https://github.com/Gokul-sc/SkillCheck",
-    demoLink: "#", // Added placeholder demo link
   },
 ];
 
