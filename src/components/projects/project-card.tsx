@@ -52,17 +52,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
       </CardContent>
       <CardFooter className="mt-auto pt-0">
         <div className="flex gap-2 w-full">
-          {githubLink && (
-            <Button variant="outline" size="sm" asChild className="flex-1">
-              <Link href={githubLink} target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-4 w-4" /> GitHub
-              </Link>
-            </Button>
-          )}
           {demoLink && (
             <Button variant="default" size="sm" asChild className="flex-1">
               <Link href={demoLink} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="mr-2 h-4 w-4" /> Demo
+              </Link>
+            </Button>
+          )}
+          {githubLink && (
+            <Button variant="outline" size="sm" asChild className="flex-1">
+              <Link href={githubLink} target="_blank" rel="noopener noreferrer">
+                <Github className="mr-2 h-4 w-4" /> GitHub
               </Link>
             </Button>
           )}
