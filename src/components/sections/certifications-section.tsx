@@ -4,7 +4,7 @@ import { BookMarked } from 'lucide-react';
 import Link from 'next/link';
 
 const certifications = [
-  { name: "Anthropic - Prompt Engineering and AI Safety", issuerLogo: "Anthropic", link: "/Anthropic - Certificate.png" },
+  { name: "AI Fluency : Frameworks & Foundations", issuerLogo: "Anthropic", link: "/Anthropic - Certificate.png" },
   { name: "IBM – Databases and SQL for Data Science", issuerLogo: "IBM", link: "https://www.credly.com/badges/ff106da2-2c8b-404a-97db-25f720751b53" },
   { name: "Google AI Essentials – Coursera", issuerLogo: "Google", link: "https://www.coursera.org/account/accomplishments/verify/9V0R9FFSRM36?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" },
   { name: "AI for Everyone – deeplearning.ai", issuerLogo: "deeplearning.ai", link: "https://www.coursera.org/account/accomplishments/verify/VS2PUCRUY0S1?utm_source=android&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" },
