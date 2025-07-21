@@ -38,7 +38,9 @@ const TypewriterQuoteCard = () => {
         if (audioRef.current) {
           audioRef.current.currentTime = 0;
           audioRef.current.play().catch(error => {
-            // Autoplay was prevented.
+            // Autoplay was prevented. This is common in modern browsers.
+            // The user needs to interact with the page first.
+            // We can log this for debugging but won't show an error to the user.
             console.warn("Typewriter sound autoplay was prevented.", error);
           });
         }
@@ -79,6 +81,7 @@ const TypewriterQuoteCard = () => {
         </pre>
       </div>
 
+      {/* Add an audio file named `typewriter-key.mp3` to your /public folder for this to work */}
       <audio ref={audioRef} src="/typewriter-key.mp3" preload="auto" />
     </div>
   );
