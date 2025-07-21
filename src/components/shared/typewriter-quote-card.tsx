@@ -21,12 +21,12 @@ const TypewriterQuoteCard = () => {
   useEffect(() => {
     // Reset animation if it's already completed
     if (lineIndex >= QUOTE_LINES.length) {
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         setLineIndex(0);
         setCharIndex(0);
         setDisplayedText("");
       }, 3000); // Pause for 3s before restarting
-      return;
+      return () => clearTimeout(timer); // Cleanup the timer
     }
 
     const typingInterval = setInterval(() => {
