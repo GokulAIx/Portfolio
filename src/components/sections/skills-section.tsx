@@ -29,7 +29,7 @@ const skillsData = {
   },
   deepLearning: {
     title: "Deep Learning",
-    items: ["Neural Network Architectures", "Activation Functions", "Loss Functions", "Optimization (PyTorch)"],
+    items: ["Neural Network Architectures", "Activation Functions", "Loss Functions", "Optimization (PyTorch)", "Transformer Architecture", "Encoder - Decoder"],
     icon: <Cpu className="w-6 h-6" />
   },
   nlp: {
