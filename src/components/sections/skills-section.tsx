@@ -4,15 +4,10 @@ import SkillCategory from '@/components/skills/skill-category';
 import { Code2, Brain, Lightbulb, Cpu, MessageSquareText } from 'lucide-react';
 
 const skillsData = {
-  languages: {
-    title: "Programming Languages",
-    items: ["Python", "SQL (MySQL, SQLite)", "Joins", "Subqueries", "Window Functions", "Indexing", "Query Optimization"],
-    icon: <Code2 className="w-6 h-6" />
-  },
-  frameworks: {
-    title: "Libraries/Frameworks",
-    items: ["PyTorch", "Scikit-learn", "Numpy", "Pandas (Data Cleaning)", "NLTK", "Sentence Transformers", "Flask", "Matplotlib", "Seaborn"],
-    icon: <Brain className="w-6 h-6" />
+  deepLearning: {
+    title: "Deep Learning",
+    items: ["Neural Network Architectures", "Activation Functions", "Loss Functions", "Optimization (PyTorch)", "Transformer Architecture", "Encoder - Decoder"],
+    icon: <Cpu className="w-6 h-6" />
   },
   machineLearning: {
     title: "Machine Learning",
@@ -27,15 +22,20 @@ const skillsData = {
     ],
     icon: <Lightbulb className="w-6 h-6" />
   },
-  deepLearning: {
-    title: "Deep Learning",
-    items: ["Neural Network Architectures", "Activation Functions", "Loss Functions", "Optimization (PyTorch)", "Transformer Architecture", "Encoder - Decoder"],
-    icon: <Cpu className="w-6 h-6" />
+  frameworks: {
+    title: "Libraries/Frameworks",
+    items: ["PyTorch", "Scikit-learn", "Numpy", "Pandas (Data Cleaning)", "NLTK", "Sentence Transformers", "Flask", "Matplotlib", "Seaborn"],
+    icon: <Brain className="w-6 h-6" />
   },
   nlp: {
     title: "Natural Language Processing",
     items: ["Tokenization", "Bag of Words", "TF-IDF", "Stemming", "Lemmatization (NLTK)", "Sentence Transformers (Embedding Generation)"],
     icon: <MessageSquareText className="w-6 h-6" />
+  },
+  languages: {
+    title: "Programming Languages",
+    items: ["Python", "SQL (MySQL, SQLite)", "Joins", "Subqueries", "Window Functions", "Indexing", "Query Optimization"],
+    icon: <Code2 className="w-6 h-6" />
   }
 };
 
