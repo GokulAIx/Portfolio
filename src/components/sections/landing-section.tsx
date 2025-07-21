@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import SectionContainer from '@/components/shared/section-container';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import QuoteCard from '@/components/shared/quote-card';
+import TypewriterQuoteCard from '@/components/shared/typewriter-quote-card';
 
 // Simple X logo SVG
 const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -76,7 +76,7 @@ const LandingSection = () => {
           </div>
         </div>
         <div className="hidden md:flex justify-center">
-          <QuoteCard />
+          <TypewriterQuoteCard />
         </div>
       </div>
     </SectionContainer>

@@ -299,3 +299,17 @@ body {
   animation: borderGlowPulse 2.5s ease-in-out infinite alternate;
 }
 
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 5px 15px hsl(var(--primary)/0.3));
+  }
+  50% {
+    transform: translateY(-10px);
+    filter: drop-shadow(0 15px 25px hsl(var(--primary)/0.4));
+  }
+}
+
+.animated-icon-float {
+  animation: iconFloat 4s ease-in-out infinite;
+}
