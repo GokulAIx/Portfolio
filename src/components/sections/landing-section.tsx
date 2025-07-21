@@ -76,12 +76,13 @@ const LandingSection = () => {
         </div>
         <div className="hidden md:flex justify-center">
           <Image
-            src="https://placehold.co/600x400.png" 
+            src="https://placehold.co/600x400.png"
             alt="Deep Learning Neural Network"
             width={600}
             height={400}
             className={cn(
-              "object-cover contact-form-fire-border"
+              "object-cover rounded-lg shadow-xl",
+              "contact-form-fire-border"
             )}
             data-ai-hint="neural network"
           />
