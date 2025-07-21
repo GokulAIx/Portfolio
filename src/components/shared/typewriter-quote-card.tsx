@@ -19,44 +19,47 @@ const TypewriterQuoteCard = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
-    // Reset animation if it's already completed
+    // This effect handles resetting the animation after it's done.
     if (lineIndex >= QUOTE_LINES.length) {
       const timer = setTimeout(() => {
         setLineIndex(0);
         setCharIndex(0);
         setDisplayedText("");
       }, 3000); // Pause for 3s before restarting
-      return () => clearTimeout(timer); // Cleanup the timer
+      return () => clearTimeout(timer);
     }
 
+    // This effect handles the typing animation itself.
     const typingInterval = setInterval(() => {
-      if (charIndex < QUOTE_LINES[lineIndex].length) {
-        setDisplayedText((prev) => prev + QUOTE_LINES[lineIndex][charIndex]);
-        setCharIndex((prev) => prev + 1);
-
-        // Play sound
-        if (audioRef.current) {
-          audioRef.current.currentTime = 0;
-          audioRef.current.play().catch(error => {
-            // Autoplay was prevented. This is common in modern browsers.
-            // The user needs to interact with the page first.
-            // We can log this for debugging but won't show an error to the user.
-            console.warn("Typewriter sound autoplay was prevented.", error);
-          });
-        }
-
-      } else {
-        // Move to the next line
+      let currentLine = QUOTE_LINES[lineIndex];
+      
+      // If we've finished the current line
+      if (charIndex >= currentLine.length) {
+        // If there are more lines to type
         if (lineIndex < QUOTE_LINES.length - 1) {
-          setLineIndex((prev) => prev + 1);
+          setLineIndex(prev => prev + 1);
           setCharIndex(0);
-          setDisplayedText((prev) => prev + "\n");
+          setDisplayedText(prev => prev + "\n");
         } else {
-          // End of all lines
-          setLineIndex((prev) => prev + 1);
+          // All lines are typed, stop the interval and trigger the reset effect
+          setLineIndex(prev => prev + 1);
           clearInterval(typingInterval);
         }
+        return;
       }
+      
+      // Add the next character
+      setDisplayedText(prev => prev + currentLine[charIndex]);
+      setCharIndex(prev => prev + 1);
+
+      // Play sound for the character
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0; // Rewind to the start
+        audioRef.current.play().catch(error => {
+          console.warn("Typewriter sound autoplay was prevented.", error);
+        });
+      }
+
     }, 60); // Speed of typing
 
     return () => clearInterval(typingInterval);
