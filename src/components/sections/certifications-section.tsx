@@ -1,9 +1,11 @@
+
 import SectionContainer from '@/components/shared/section-container';
 import { Card, CardContent } from '@/components/ui/card';
 import { BookMarked } from 'lucide-react';
 import Link from 'next/link';
 
 const certifications = [
+  { name: "Introduction To Fine-Tuning - The LLM Course", issuerLogo: "Hugging Face", link: "/HuggingFace.jpg" },
   { name: "Introduction to Transformer-Based Natural Language Processing", issuerLogo: "Nvidia", link: "/Nvidia.pdf" },
   { name: "Anthropic - AI Fluency : Frameworks & Foundations", issuerLogo: "Anthropic", link: "/Anthropic - Certificate.png" },
   { name: "IBM – Databases and SQL for Data Science", issuerLogo: "IBM", link: "https://www.credly.com/badges/ff106da2-2c8b-404a-97db-25f720751b53" },
