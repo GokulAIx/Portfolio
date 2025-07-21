@@ -17,7 +17,7 @@ const CertificationsSection = () => {
   return (
     <SectionContainer id="certifications" title="Certifications">
       <Card className="shadow-lg">
-        <CardContent className="p-6 max-h-[30vh] overflow-y-auto">
+        <CardContent className="p-6 max-h-[60vh] overflow-y-auto">
           <ul className="space-y-4">
             {certifications.map((cert, index) => (
               <li key={index} className="flex items-center text-md">
