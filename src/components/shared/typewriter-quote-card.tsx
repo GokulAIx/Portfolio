@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { BrainCircuit } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -16,6 +16,7 @@ const TypewriterQuoteCard = () => {
   const [displayedText, setDisplayedText] = useState("");
   const [lineIndex, setLineIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     // Reset animation if it's already completed
@@ -32,6 +33,16 @@ const TypewriterQuoteCard = () => {
       if (charIndex < QUOTE_LINES[lineIndex].length) {
         setDisplayedText((prev) => prev + QUOTE_LINES[lineIndex][charIndex]);
         setCharIndex((prev) => prev + 1);
+
+        // Play sound
+        if (audioRef.current) {
+          audioRef.current.currentTime = 0;
+          audioRef.current.play().catch(error => {
+            // Autoplay was prevented.
+            console.warn("Typewriter sound autoplay was prevented.", error);
+          });
+        }
+
       } else {
         // Move to the next line
         if (lineIndex < QUOTE_LINES.length - 1) {
@@ -67,6 +78,8 @@ const TypewriterQuoteCard = () => {
           <span className="inline-block w-1 h-7 bg-slate-100 animate-pulse ml-1" aria-hidden="true"></span>
         </pre>
       </div>
+
+      <audio ref={audioRef} src="/typewriter-key.mp3" preload="auto" />
     </div>
   );
 };
