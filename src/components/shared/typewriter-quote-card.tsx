@@ -1,7 +1,6 @@
-
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { BrainCircuit } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -9,14 +8,11 @@ const QUOTE_LINES = [
   "\"Training Artificial Networks",
   "with my Biological Neural Network!\""
 ];
-const TOTAL_CHARS = QUOTE_LINES.join(" ").length;
-const ANIMATION_DURATION = TOTAL_CHARS * 40; // 40ms per char
 
 const TypewriterQuoteCard = () => {
   const [displayedText, setDisplayedText] = useState("");
   const [lineIndex, setLineIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
-  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     // This effect handles resetting the animation after it's done.
@@ -52,14 +48,6 @@ const TypewriterQuoteCard = () => {
       setDisplayedText(prev => prev + currentLine[charIndex]);
       setCharIndex(prev => prev + 1);
 
-      // Play sound for the character
-      if (audioRef.current) {
-        audioRef.current.currentTime = 0; // Rewind to the start
-        audioRef.current.play().catch(error => {
-          console.warn("Typewriter sound autoplay was prevented.", error);
-        });
-      }
-
     }, 60); // Speed of typing
 
     return () => clearInterval(typingInterval);
@@ -83,9 +71,6 @@ const TypewriterQuoteCard = () => {
           <span className="inline-block w-1 h-7 bg-slate-100 animate-pulse ml-1" aria-hidden="true"></span>
         </pre>
       </div>
-
-      {/* Add an audio file named `typewriter-key.mp3` to your /public folder for this to work */}
-      <audio ref={audioRef} src="/typewriter-key.mp3" preload="auto" />
     </div>
   );
 };
