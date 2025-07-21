@@ -5,6 +5,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import SectionContainer from '@/components/shared/section-container';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import QuoteCard from '@/components/shared/quote-card';
 
 // Simple X logo SVG
 const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -75,17 +76,7 @@ const LandingSection = () => {
           </div>
         </div>
         <div className="hidden md:flex justify-center">
-          <Image
-            src="https://placehold.co/600x400.png"
-            alt="Deep Learning Neural Network"
-            width={600}
-            height={400}
-            className={cn(
-              "object-cover rounded-lg shadow-xl",
-              "contact-form-fire-border"
-            )}
-            data-ai-hint="neural network"
-          />
+          <QuoteCard />
         </div>
       </div>
     </SectionContainer>
