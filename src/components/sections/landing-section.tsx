@@ -76,17 +76,14 @@ const LandingSection = () => {
         </div>
         <div className="hidden md:flex justify-center">
           <Image
-            src="/Progress-Bar.jpg" 
-            alt="Progress Bar Visual"
-            width={400}
+            src="https://placehold.co/600x400.png" 
+            alt="Deep Learning Neural Network"
+            width={600}
             height={400}
             className={cn(
-              "object-cover contact-form-fire-border" 
-              // Note: contact-form-fire-border applies rounded-xl (0.75rem)
-              // Original rounded-lg (0.5rem) and shadow-xl are removed
+              "object-cover contact-form-fire-border"
             )}
-            data-ai-hint="progress analytics"
-            unoptimized={true} 
+            data-ai-hint="neural network"
           />
         </div>
       </div>
