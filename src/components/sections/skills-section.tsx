@@ -6,7 +6,7 @@ import { Code2, Brain, Lightbulb, Cpu, MessageSquareText } from 'lucide-react';
 const skillsData = {
   deepLearning: {
     title: "Deep Learning",
-    items: ["Neural Network Architectures", "Activation Functions", "Loss Functions", "Optimization (PyTorch)", "Transformer Architecture", "Encoder - Decoder"],
+    items: ["Neural Network Architectures", "Activation Functions", "Loss Functions", "Optimization (PyTorch)", "Transformer Architecture", "Encoder - Decoder", "Fine-Tuning"],
     icon: <Cpu className="w-6 h-6" />
   },
   machineLearning: {
