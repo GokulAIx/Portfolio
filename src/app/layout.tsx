@@ -12,10 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Gokul.AI - Personal Portfolio',
   description: 'Personal portfolio of Gokul Sree Chandra, an AI/ML and NLP enthusiast.',
-  icons: {
-    icon: '/Logo.png', // Path relative to the public folder
-    apple: '/Logo.png', // For Apple devices
-  },
+  // The 'icons' object has been removed to rely on the direct <link> tags below.
 };
 
 export default function RootLayout({
