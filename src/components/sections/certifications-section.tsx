@@ -5,6 +5,7 @@ import { BookMarked } from 'lucide-react';
 import Link from 'next/link';
 
 const certifications = [
+  { name: "Fine-Tuning Language Models with Hugging Face", issuerLogo: "Hugging Face", link: "/FineTuning.jpg" },
   { name: "Introduction To Fine-Tuning - The LLM Course", issuerLogo: "Hugging Face", link: "/HuggingFace.jpg" },
   { name: "Introduction to Transformer-Based Natural Language Processing", issuerLogo: "Nvidia", link: "/Nvidia.pdf" },
   { name: "Anthropic - AI Fluency : Frameworks & Foundations", issuerLogo: "Anthropic", link: "/Anthropic - Certificate.png" },
