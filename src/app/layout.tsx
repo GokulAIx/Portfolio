@@ -26,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} dark`}>
       <head>
-        {/* Favicon links are primarily handled by the metadata.icons object above */}
+        {/* Explicitly adding favicon links for better browser compatibility */}
+        <link rel="icon" href="/Logo.png" sizes="any" />
+        <link rel="apple-touch-icon" href="/Logo.png" />
       </head>
       <body className="font-body antialiased">
         {children}
