@@ -12,6 +12,14 @@ const projectsData = [
     demoLink: "https://www.linkedin.com/feed/update/urn:li:activity:7363034410851446784/",
   },
   {
+    title: "SkillCheck – AI Skill Evaluator",
+    description: "Developed SkillCheck, a Flask-based web application utilizing Groq API to evaluate user skills and improving learning outcomes. Integrated a Large Language Model (LLM) via Groq API, providing personalized AI-driven feedback, enabling learners to optimize their study approach 100% of the time. Used Flask for backend, Pandas for data preprocessing, Groq API for LLM integration.",
+    tools: ["Flask", "Groq API", "LLM", "Python"],
+    imageUrl: "/SkillCheck.png",
+    imageHint: "skills assessment",
+    githubLink: "https://github.com/Gokul-sc/SkillCheck",
+  },
+  {
     title: "Sentiment Analysis on IMDB Dataset",
     description: "Developed and implemented a sentiment analysis model using logistic regression to classify movie reviews from the IM-DB dataset. This project showcases skills in data preprocessing, feature extraction (TF-IDF), and model evaluation, achieving an accuracy of 86%.",
     tools: ["Python", "Scikit-learn", "NLTK", "Pandas"],
@@ -19,14 +27,6 @@ const projectsData = [
     imageHint: "sentiment analysis chart",
     githubLink: "https://github.com/Gokul-sc/PROJECTS",
     demoLink: "https://gokulaix-sentiment-analysis.streamlit.app/",
-  },
-  {
-    title: "SkillCheck – AI Skill Evaluator",
-    description: "Developed SkillCheck, a Flask-based web application utilizing Groq API to evaluate user skills and improving learning outcomes. Integrated a Large Language Model (LLM) via Groq API, providing personalized AI-driven feedback, enabling learners to optimize their study approach 100% of the time. Used Flask for backend, Pandas for data preprocessing, Groq API for LLM integration.",
-    tools: ["Flask", "Groq API", "LLM", "Python"],
-    imageUrl: "/SkillCheck.png",
-    imageHint: "skills assessment",
-    githubLink: "https://github.com/Gokul-sc/SkillCheck",
   },
 ];
 
