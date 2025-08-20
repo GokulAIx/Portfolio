@@ -15,7 +15,7 @@ const AboutSection = () => {
           My journey began with a curiosity for how machines understand human language, which led me to explore NLP techniques like text classification, Transformers, and Retrieval-Augmented Generation (RAG). I’ve worked with libraries such as PyTorch, Scikit-learn, and Hugging Face, and continue to build projects that strengthen my skills.
         </p>
         <p className="text-lg sm:text-xl text-foreground leading-relaxed mb-4">
-          From participating in hackathons to collaborating with peers, I’m committed to becoming a skilled NLP engineer — one who can turn unstructured language into intelligent action.
+          From participating in hackathons to collaborating with peers, I’m committed to becoming a skilled NLP engineer, one who can turn unstructured language into intelligent action.
         </p>
         <p className="text-lg sm:text-xl text-foreground leading-relaxed">
           Let’s connect if you’re working on AI/NLP projects or exploring innovative ideas in this space.
