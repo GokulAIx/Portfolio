@@ -4,7 +4,7 @@ import ProjectCard from '@/components/projects/project-card';
 
 const projectsData = [
   {
-    title: "Blaze - AI web page Summarizer",
+    title: "Blaze - AI Web Page Summarizer",
     description: "Developed a full-stack AI Chrome extension with a Python/Flask back-end to summarize webpages using the Google Gemini API. Engineered a Map-Reduce strategy with LangChain to handle long documents and managed API rate limits with intelligent request handling.",
     tools: ["LangChain", "Google Gemini API", "JavaScript", "Python", "Flask", "HTML"],
     imageUrl: "https://placehold.co/600x400.png",

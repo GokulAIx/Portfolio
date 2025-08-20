@@ -56,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
             <Button variant="default" size="sm" asChild className="flex-1">
               <Link href={demoLink} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="mr-2 h-4 w-4" /> 
-                {title === 'Blaze - AI web page Summarizer' ? 'Demo Video on Linkedin' : 'Live Demo'}
+                {title === 'Blaze - AI Web Page Summarizer' ? 'Demo Video on Linkedin' : 'Live Demo'}
               </Link>
             </Button>
           )}
