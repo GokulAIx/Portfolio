@@ -21,8 +21,8 @@ const projectsData = [
   },
   {
     title: "Sentiment Analysis on IMDB Dataset",
-    description: "Developed and implemented a sentiment analysis model using logistic regression to classify movie reviews from the IM-DB dataset. This project showcases skills in data preprocessing, feature extraction (TF-IDF), and model evaluation, achieving an accuracy of 86%.",
-    tools: ["Python", "Scikit-learn", "NLTK", "Pandas"],
+    description: "Used the pre-trained Sentence-Transformer (all-MiniLM-L6-v2) to generate sentence embeddings and built a fully connected PyTorch neural network to classify reviews as positive or negative. Processed 50,000 IMDB reviews and achieved 80.24% test accuracy, demonstrating transfer learning’s effectiveness in sentiment analysis.",
+    tools: ["Python", "PyTorch", "sentence-transformers", "Neural Networks"],
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "sentiment analysis chart",
     githubLink: "https://github.com/Gokul-sc/PROJECTS",
