@@ -1,48 +1,45 @@
 
 import SectionContainer from '@/components/shared/section-container';
 import SkillCategory from '@/components/skills/skill-category';
-import { Code2, Brain, Lightbulb, Cpu, MessageSquareText } from 'lucide-react';
+import { Code2, Brain, Lightbulb, Cpu, MessageSquareText, Sparkles } from 'lucide-react';
 
 const skillsData = {
+  languages: {
+    title: "Programming Languages",
+    items: ["Python", "SQL", "Joins", "Subqueries", "Window Functions", "Indexing", "Query Optimization"],
+    icon: <Code2 className="w-6 h-6" />
+  },
+  genAI: {
+    title: "GenAI and LLMs",
+    items: ["LangChain", "Retrieval-Augmented Generation (RAG)", "Prompt Engineering", "Hugging Face", "Transformers", "LLM APIs (Gemini, Groq, OpenAI)", "Flask-based AI Deployment"],
+    icon: <Sparkles className="w-6 h-6" />
+  },
   deepLearning: {
     title: "Deep Learning",
-    items: ["Neural Network Architectures", "Activation Functions", "Loss Functions", "Optimization (PyTorch)", "Transformer Architecture", "Encoder - Decoder", "Fine-Tuning", "Hugging Face"],
+    items: ["Transformer Architecture", "Encoder-Decoder Models", "Fine-Tuning", "Neural Network Architectures", "Activation Functions", "Loss Functions", "Optimization (PyTorch)"],
     icon: <Cpu className="w-6 h-6" />
   },
   machineLearning: {
     title: "Machine Learning",
-    items: [
-      "Supervised Learning (Linear/Logistic Regression)", 
-      "Regularization (L1 & L2)", 
-      "Feature Engineering", 
-      "Linear Algebra", 
-      "Probability", 
-      "Statistics", 
-      "Data Preprocessing (Normalization, Standardization, Missing Data Handling)"
-    ],
+    items: ["Supervised Learning (Regression, Classification)", "Regularization (L1 & L2)", "Feature Engineering", "Model Evaluation", "Data Preprocessing", "Probability & Statistics"],
     icon: <Lightbulb className="w-6 h-6" />
-  },
-  frameworks: {
-    title: "Libraries/Frameworks",
-    items: ["PyTorch", "Scikit-learn", "Numpy", "Pandas (Data Cleaning)", "NLTK", "Sentence Transformers", "Flask", "Matplotlib", "Seaborn"],
-    icon: <Brain className="w-6 h-6" />
   },
   nlp: {
     title: "Natural Language Processing",
-    items: ["Tokenization", "Bag of Words", "TF-IDF", "Stemming", "Lemmatization (NLTK)", "Sentence Transformers (Embedding Generation)"],
+    items: ["Sentence Transformers (Embedding Generation)", "Tokenization", "TF-IDF", "Bag of Words", "Stemming", "Lemmatization", "Text Classification", "Summarization"],
     icon: <MessageSquareText className="w-6 h-6" />
   },
-  languages: {
-    title: "Programming Languages",
-    items: ["Python", "SQL (MySQL, SQLite)", "Joins", "Subqueries", "Window Functions", "Indexing", "Query Optimization"],
-    icon: <Code2 className="w-6 h-6" />
-  }
+  frameworks: {
+    title: "Libraries/Frameworks",
+    items: ["PyTorch", "Scikit-learn", "Numpy", "Pandas (Data Cleaning)", "NLTK", "Sentence Transformers", "Flask"],
+    icon: <Brain className="w-6 h-6" />
+  },
 };
 
 const SkillsSection = () => {
   return (
     <SectionContainer id="skills" title="My Skills" titleClassName="text-primary">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {Object.values(skillsData).map(category => (
           <SkillCategory 
             key={category.title} 
