@@ -4,6 +4,15 @@ import ProjectCard from '@/components/projects/project-card';
 
 const projectsData = [
   {
+    title: "Blaze - AI web page Summarizer",
+    description: "Developed a full-stack AI Chrome extension with a Python/Flask back-end to summarize webpages using the Google Gemini API. Engineered a Map-Reduce strategy with LangChain to handle long documents and managed API rate limits with intelligent request handling.",
+    tools: ["Python", "Flask", "LangChain", "Google Gemini API", "JavaScript", "HTML"],
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "web summarizer",
+    githubLink: "https://github.com/Gokul-sc/Blaze-Gemini-Powered-Web-Summarizer",
+    demoLink: "https://www.linkedin.com/in/gokulsreechandra/",
+  },
+  {
     title: "Sentiment Analysis on IMDB Dataset",
     description: "Used the pre-trained Sentence-Transformer (all-MiniLM-L6-v2) to generate sentence embeddings and built a fully connected PyTorch neural network to classify reviews as positive or negative. Processed 50,000 IMDB reviews and achieved 80.24% test accuracy, demonstrating transfer learning’s effectiveness in sentiment analysis.",
     tools: ["Python", "PyTorch", "sentence-transformers", "Neural Networks"],
