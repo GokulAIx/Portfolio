@@ -11,7 +11,7 @@ const skillsData = {
   },
   genAI: {
     title: "GenAI and LLMs",
-    items: ["LangChain", "Retrieval-Augmented Generation (RAG)", "Prompt Engineering", "Hugging Face", "Transformers", "LLM APIs (Gemini, Groq, OpenAI)", "Flask-based AI Deployment"],
+    items: ["LangChain", "Retrieval-Augmented Generation (RAG)", "Prompt Engineering", "Hugging Face", "Transformers", "LLM APIs (Google Gemini, Groq, OpenAI)", "Flask-based AI Deployment"],
     icon: <Sparkles className="w-6 h-6" />
   },
   deepLearning: {
@@ -21,7 +21,7 @@ const skillsData = {
   },
   machineLearning: {
     title: "Machine Learning",
-    items: ["Supervised Learning (Regression, Classification)", "Regularization (L1 & L2)", "Feature Engineering", "Model Evaluation", "Data Preprocessing", "Probability & Statistics"],
+    items: ["Supervised Learning (Regression, Classification)", "Regularization (L1 & L2)", "Feature Engineering", "Model Evaluation (Cross-validation, Accuracy, Precision, Recall, F1)", "Data Preprocessing (Normalization, Standardization, Missing Data Handling)", "Probability & Statistics"],
     icon: <Lightbulb className="w-6 h-6" />
   },
   nlp: {
