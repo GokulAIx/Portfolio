@@ -6,7 +6,7 @@ const projectsData = [
   {
     title: "Blaze - AI Web Page Summarizer",
     description: "Developed a full-stack AI Chrome extension with a Python/Flask back-end to summarize webpages using the Google Gemini API. Engineered a Map-Reduce strategy with LangChain to handle long documents and managed API rate limits with intelligent request handling.",
-    tools: ["LangChain", "Google Gemini API", "JavaScript", "Python", "Flask", "HTML"],
+    tools: ["LangChain", "Google Gemini API", "JavaScript", "Python", "Flask"],
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "web summarizer",
     demoLink: "https://www.linkedin.com/feed/update/urn:li:activity:7363034410851446784/",
