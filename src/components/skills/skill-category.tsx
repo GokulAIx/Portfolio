@@ -13,14 +13,14 @@ interface SkillCategoryProps {
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills, icon }) => {
   return (
     <Card className={cn(
-      "shadow-lg bg-secondary hover:scale-105 transition-all duration-300 flex flex-col", // Added flex flex-col
+      "shadow-lg bg-secondary hover:scale-105 transition-all duration-300 flex flex-col",
       "skill-card-animated-fire-hover"
     )}>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-xl font-semibold font-headline">{title}</CardTitle>
         {icon && <div className="text-primary">{icon}</div>}
       </CardHeader>
-      <CardContent className="flex-grow"> 
+      <CardContent className="flex flex-col flex-grow">
         <div className="flex flex-wrap gap-2">
           {skills.map((skill) => (
             <Badge key={skill} variant="secondary" className="text-sm px-3 py-1 bg-card text-primary hover:bg-card/90">
