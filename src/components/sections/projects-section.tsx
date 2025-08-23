@@ -4,6 +4,15 @@ import ProjectCard from '@/components/projects/project-card';
 
 const projectsData = [
   {
+    title: "VidQuery – AI YouTube Video Assistant",
+    description: "Engineered a RAG-powered app with LangChain, ChromaDB, and FastAPI to process video transcripts and deliver context-aware answers. Allows users to instantly get answers from a YouTube video, and includes an interactive Streamlit UI.",
+    tools: ["LangChain", "ChromaDB", "FastAPI", "Streamlit", "Gemini Flash", "RAG"],
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "video query",
+    githubLink: "https://github.com/GokulAIx/VidQuery",
+    demoLink: "https://gokulaix-vidquery.streamlit.app/",
+  },
+  {
     title: "Blaze - AI Web Page Summarizer",
     description: "Developed a full-stack AI Chrome extension with a Python/Flask back-end to summarize webpages using the Google Gemini API. Engineered a Map-Reduce strategy with LangChain to handle long documents and managed API rate limits with intelligent request handling.",
     tools: ["LangChain", "Google Gemini API", "JavaScript", "Python", "Flask"],
@@ -27,15 +36,6 @@ const projectsData = [
     imageUrl: "/SkillCheck.png",
     imageHint: "skills assessment",
     githubLink: "https://github.com/Gokul-sc/SkillCheck",
-  },
-  {
-    title: "VidQuery – AI YouTube Video Assistant",
-    description: "Engineered a RAG-powered app with LangChain, ChromaDB, and FastAPI to process video transcripts and deliver context-aware answers. Allows users to instantly get answers from a YouTube video, and includes an interactive Streamlit UI.",
-    tools: ["LangChain", "ChromaDB", "FastAPI", "Streamlit", "Gemini Flash", "RAG"],
-    imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "video query",
-    githubLink: "https://github.com/GokulAIx/VidQuery",
-    demoLink: "https://gokulaix-vidquery.streamlit.app/",
   },
 ];
 
