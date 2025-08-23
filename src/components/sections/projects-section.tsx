@@ -28,6 +28,15 @@ const projectsData = [
     imageHint: "skills assessment",
     githubLink: "https://github.com/Gokul-sc/SkillCheck",
   },
+  {
+    title: "VidQuery – AI YouTube Video Assistant",
+    description: "Engineered a RAG-powered app with LangChain, ChromaDB, and FastAPI to process video transcripts and deliver context-aware answers. Allows users to instantly get answers from a YouTube video, and includes an interactive Streamlit UI.",
+    tools: ["LangChain", "ChromaDB", "FastAPI", "Streamlit", "Gemini Flash", "RAG"],
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "video query",
+    githubLink: "https://github.com/GokulAIx/VidQuery",
+    demoLink: "https://gokulaix-vidquery.streamlit.app/",
+  },
 ];
 
 const ProjectsSection = () => {
