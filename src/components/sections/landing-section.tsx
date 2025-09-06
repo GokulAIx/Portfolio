@@ -26,7 +26,7 @@ const LandingSection = () => {
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-lg mb-6 border-4 border-primary/50">
             <Image
-              src="/Profile-pic.jpg"
+              src="/Profile-pic.png"
               alt="Gokul Sree Chandra"
               fill={true}
               style={{ objectFit: 'cover' }}
