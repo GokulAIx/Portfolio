@@ -324,6 +324,6 @@ body {
 .btn-spacey:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px 5px hsla(270, 70%, 45%, 0.6);
-  color: hsl(var(--foreground)); /* Keep text color light on hover */
+  color: hsl(var(--highlight-yellow)); /* Changed to bright yellow on hover */
   background: linear-gradient(135deg, hsl(270, 70%, 45%), hsl(240, 60%, 35%)); /* Slightly brighten on hover */
 }
