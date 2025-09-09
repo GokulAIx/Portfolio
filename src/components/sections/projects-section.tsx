@@ -13,9 +13,9 @@ const projectsData = [
     demoLink: "https://gokulaix-vidquery.streamlit.app/",
   },
   {
-    title: "Blaze - AI Web Page Summarizer",
-    description: "Developed a full-stack AI Chrome extension with a Python/Flask back-end to summarize webpages using the Google Gemini API. Engineered a Map-Reduce strategy with LangChain to handle long documents and managed API rate limits with intelligent request handling.",
-    tools: ["LangChain", "Google Gemini API", "JavaScript", "Python", "Flask"],
+    title: "Blaze - AI Web Page Summarizer and ChatBot - Chrome Extension",
+    description: "A multi-functional AI browser extension providing instant summarization and enabling users to ask in-depth questions about any webpage’s content. This tool leverages a custom-built RAG pipeline and a Python/Flask API to deliver precise, AI-driven insights directly in the browser. Implemented Map-Reduce for efficient Web-Page summarization, and ChromaDB for Vector Store.",
+    tools: ["Python", "LangChain", "Google Gemini", "Hugging Face", "ChromaDB", "JavaScript"],
     imageUrl: "/Blaze.jpg",
     imageHint: "web summarizer",
     demoLink: "https://www.linkedin.com/feed/update/urn:li:activity:7363034410851446784/",
