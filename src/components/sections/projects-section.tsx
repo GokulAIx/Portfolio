@@ -16,7 +16,7 @@ const projectsData = [
     title: "Blaze - AI Web Page Summarizer and ChatBot - Chrome Extension",
     description: "A multi-functional AI browser extension providing instant summarization and enabling users to ask in-depth questions about any webpage’s content. This tool leverages a custom-built RAG pipeline and a Python/Flask API to deliver precise, AI-driven insights directly in the browser. Implemented Map-Reduce for efficient Web-Page summarization, and ChromaDB for Vector Store.",
     tools: ["Python", "LangChain", "Google Gemini", "Hugging Face", "ChromaDB", "JavaScript"],
-    imageUrl: "/Blaze.jpg",
+    imageUrl: "/Blaze V2.jpg",
     imageHint: "web summarizer",
     demoLink: "https://www.linkedin.com/feed/update/urn:li:activity:7363034410851446784/",
   },
