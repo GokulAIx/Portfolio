@@ -1,4 +1,4 @@
-# 💼 Gokul Sree Chandra — Personal Portfolio
+ # 💼 Gokul Sree Chandra — Personal Portfolio
 
 Welcome to my personal portfolio website!  
 This is where I showcase my skills, projects, and experience as a Computer Science and AI/ML enthusiast.
