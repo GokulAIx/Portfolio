@@ -52,13 +52,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
       </CardContent>
       <CardFooter className="mt-auto pt-0">
         <div className="flex flex-col gap-2 w-full">
-          {title === 'Blaze - AI Web Page Summarizer' && demoLink ? (
-            <Button variant="default" size="sm" asChild className="w-full">
-              <Link href={demoLink} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                Demo Video on Linkedin
-              </Link>
-            </Button>
+          {title === 'Blaze - AI Web Page Summarizer and ChatBot - Chrome Extension' ? (
+            <>
+              {demoLink && (
+                <Button variant="default" size="sm" asChild className="w-full">
+                  <Link href={demoLink} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Demo Video on Linkedin
+                  </Link>
+                </Button>
+              )}
+              {githubLink && (
+                <Button variant="outline" size="sm" asChild className="w-full">
+                  <Link href={githubLink} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" /> GitHub
+                  </Link>
+                </Button>
+              )}
+            </>
           ) : (
             <>
               {demoLink && (

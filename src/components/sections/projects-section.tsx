@@ -10,6 +10,7 @@ const projectsData = [
     imageUrl: "/Blaze V2.jpg",
     imageHint: "web summarizer",
     demoLink: "https://www.linkedin.com/feed/update/urn:li:activity:7363034410851446784/",
+    githubLink: "https://github.com/GokulAIx/Blaze",
   },
   {
     title: "VidQuery – AI YouTube Video Assistant",
