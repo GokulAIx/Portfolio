@@ -9,7 +9,7 @@ const projectsData = [
     tools: ["Python", "LangChain", "Google Gemini", "Hugging Face", "ChromaDB", "JavaScript"],
     imageUrl: "/Blaze V2.jpg",
     imageHint: "web summarizer",
-    demoLink: "https://www.linkedin.com/feed/update/urn:li:activity:7363034410851446784/",
+    demoLink: "https://www.linkedin.com/feed/update/urn:li:activity:7371006942615580672/",
     githubLink: "https://github.com/GokulAIx/Blaze",
   },
   {
