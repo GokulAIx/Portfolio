@@ -75,7 +75,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
                 </Button>
               )}
               {linkedinLink && (
-                <Button variant="outline" size="sm" asChild className="w-full">
+                <Button variant="outline" size="sm" asChild className="w-full btn-spacey">
                   <Link href={linkedinLink} target="_blank" rel="noopener noreferrer">
                     <Linkedin className="mr-2 h-4 w-4" /> Linkedin Demo
                   </Link>
