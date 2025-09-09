@@ -20,6 +20,7 @@ const projectsData = [
     imageHint: "video query",
     githubLink: "https://github.com/GokulAIx/VidQuery",
     demoLink: "https://gokulaix-vidquery.streamlit.app/",
+    linkedinLink: "#", // Placeholder for the LinkedIn demo link
   },
   {
     title: "Sentiment Analysis on IMDB Dataset",

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink, Linkedin } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ProjectCardProps {
@@ -15,9 +15,12 @@ interface ProjectCardProps {
   imageHint: string;
   githubLink?: string;
   demoLink?: string;
+  linkedinLink?: string; // New property for the special case
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, imageUrl, imageHint, githubLink, demoLink }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, imageUrl, imageHint, githubLink, demoLink, linkedinLink }) => {
+  const isVidQuery = title === 'VidQuery – AI YouTube Video Assistant';
+
   return (
     <Card className={cn(
       "group flex flex-col h-full overflow-hidden shadow-lg hover:scale-105 transition-all duration-300 project-card-animated-dark-energy-hover"
@@ -60,12 +63,36 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
               </Link>
             </Button>
           )}
-          {githubLink && (
-            <Button variant="outline" size="sm" asChild className="w-full">
-              <Link href={githubLink} target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-4 w-4" /> GitHub
-              </Link>
-            </Button>
+
+          {isVidQuery ? (
+            // Special layout for VidQuery: side-by-side buttons
+            <div className="flex gap-2 w-full">
+              {githubLink && (
+                <Button variant="outline" size="sm" asChild className="w-full">
+                  <Link href={githubLink} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" /> GitHub
+                  </Link>
+                </Button>
+              )}
+              {linkedinLink && (
+                <Button variant="outline" size="sm" asChild className="w-full">
+                  <Link href={linkedinLink} target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="mr-2 h-4 w-4" /> Linkedin Demo
+                  </Link>
+                </Button>
+              )}
+            </div>
+          ) : (
+            // Default layout for other projects
+            <>
+              {githubLink && (
+                <Button variant="outline" size="sm" asChild className="w-full">
+                  <Link href={githubLink} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" /> GitHub
+                  </Link>
+                </Button>
+              )}
+            </>
           )}
         </div>
       </CardFooter>
