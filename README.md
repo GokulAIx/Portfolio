@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website!  
 This is where I showcase my skills, projects, and experience as a Computer Science and AI/ML enthusiast.
 
-> **🌐 Live Demo**: [gokulsreechandra.dev](https://soft-truffle-eada3e.netlify.app/)  
+> **🌐 Live Demo**: [gokulsreechandra.dev](https://gokulaix.vercel.app/)  
 > **🔗 LinkedIn**: [Gokul Sree Chandra](https://www.linkedin.com/in/gokulsreechandra)  
 > **🐦 X (Twitter)**: [@GokulAIx](https://x.com/gokulaix)
 
