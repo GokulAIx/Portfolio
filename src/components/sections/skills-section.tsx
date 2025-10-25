@@ -11,7 +11,7 @@ const skillsData = {
   },
   genAI: {
     title: "GenAI and LLMs",
-    items: ["LangChain", "Retrieval-Augmented Generation (RAG)", "Prompt Engineering", "Hugging Face", "Transformers", "LLM APIs (Google Gemini, Groq, OpenAI)", "Flask-based AI Deployment"],
+    items: ["LangChain", "LangGraph", "Retrieval-Augmented Generation (RAG)", "Prompt Engineering", "Hugging Face", "Transformers", "LLM APIs (Google Gemini, Groq, OpenAI)", "Flask-based AI Deployment"],
     icon: <Sparkles className="w-6 h-6" />
   },
   deepLearning: {
