@@ -31,7 +31,7 @@ const skillsData = {
   },
   frameworks: {
     title: "Libraries/Frameworks",
-    items: ["PyTorch", "Scikit-learn", "Numpy", "Pandas (Data Cleaning)", "NLTK", "Sentence Transformers", "Flask"],
+    items: ["PyTorch", "Scikit-learn", "Numpy", "Pandas (Data Cleaning)", "NLTK", "Sentence Transformers", "Flask", "FastAPI"],
     icon: <Brain className="w-6 h-6" />
   },
 };
