@@ -7,6 +7,7 @@ const experienceData = [
     company: "Fidura AI (Remote, India)",
     duration: "October 2025 – Present",
     responsibilities: [
+      "Developed a production-grade RAG system to extract 19 structured fields from tender PDFs, combining hybrid retrieval (sentence-transformers + pgvector keyword boosting), robust Docling/PyMuPDF ingestion, and bounded-concurrency LLM extraction with page-level provenance.",
       "Engineered 1 AI agent orchestrator using LangGraph to automate complex quantitative workflows, from research to simulated execution.",
       "Generated 5+ backend REST APIs (FastAPI) that allow the agent to connect to and control the financial tools.",
       "Integrated 4+ custom financial tools for strategy backtesting, simulated order placement, and calculating hedge ratios for risk management.",
