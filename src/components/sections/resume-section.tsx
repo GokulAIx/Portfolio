@@ -18,8 +18,9 @@ const ResumeSection = () => {
             {/* 
               Ensure your resume PDF is named "Gokul-Resume.pdf" 
               and placed in the "public" folder of your project.
+              The 'download' attribute is removed to let the browser handle the file.
             */}
-            <Link href="/Gokul-Resume.pdf" target="_blank" rel="noopener noreferrer" download="Gokul-Resume.pdf">
+            <Link href="/Gokul-Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Download className="mr-2 h-5 w-5" />
               Download Resume
             </Link>
