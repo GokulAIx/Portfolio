@@ -1,3 +1,4 @@
+
 import SectionContainer from '@/components/shared/section-container';
 import { UserCircle } from 'lucide-react';
 
@@ -9,16 +10,18 @@ const AboutSection = () => {
            <UserCircle className="w-16 h-16 text-primary" />
         </div>
         <p className="text-lg sm:text-xl text-foreground leading-relaxed mb-4">
-          Hello, I’m Gokul Sree Chandra, an enthusiastic learner and practitioner in Natural Language Processing and Machine Learning. I’m currently pursuing a B.Tech in Computer Science Engineering at GITAM, with a deep interest in building language-aware AI systems.
+          My approach to AI engineering has evolved from writing code that works to thinking about systems that continue to work under real-world constraints. Through hands-on experience building production-facing AI pipelines and backend services, I’ve learned to prioritize reliability, observability, and controlled failure over one-off solutions.
         </p>
         <p className="text-lg sm:text-xl text-foreground leading-relaxed mb-4">
-          My journey began with a curiosity for how machines understand human language, which led me to explore NLP techniques like text classification, Transformers, and Retrieval-Augmented Generation (RAG). I’ve worked with libraries such as PyTorch, Scikit-learn, and Hugging Face, and continue to build projects that strengthen my skills.
+          When I work on a system, I consistently think through:
         </p>
-        <p className="text-lg sm:text-xl text-foreground leading-relaxed mb-4">
-          From participating in hackathons to collaborating with peers, I’m committed to becoming a skilled NLP engineer, one who can turn unstructured language into intelligent action.
-        </p>
+        <ul className="list-disc list-inside text-lg sm:text-xl text-foreground leading-relaxed mb-4 space-y-2">
+            <li>What is the most likely way this can fail?</li>
+            <li>How would we detect and diagnose it in production?</li>
+            <li>What is the simplest rollback or recovery path?</li>
+        </ul>
         <p className="text-lg sm:text-xl text-foreground leading-relaxed">
-          Let’s connect if you’re working on AI/NLP projects or exploring innovative ideas in this space.
+          My current work spans AI-driven workflows, backend API development (FastAPI), and agent-based systems, with a focus on connecting machine learning components to reliable, well-structured services that can be used in real applications.
         </p>
       </div>
     </SectionContainer>
