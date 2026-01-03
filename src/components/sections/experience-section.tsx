@@ -1,3 +1,4 @@
+
 import SectionContainer from '@/components/shared/section-container';
 import ExperienceItem from '@/components/experience/experience-item';
 
@@ -11,6 +12,7 @@ const experienceData = [
       "Engineered 1 AI agent orchestrator using LangGraph to automate complex quantitative workflows, from research to simulated execution.",
       "Generated 5+ backend REST APIs (FastAPI) that allow the agent to connect to and control the financial tools.",
       "Integrated 4+ custom financial tools for strategy backtesting, simulated order placement, and calculating hedge ratios for risk management.",
+      "Developed a Multi-Step Reasoning Agent that acts as a global supply chain analyst. Built on LangGraph, the system orchestrates autonomous search workflows to cross-reference commodity prices with live port congestion and regulatory news, transforming raw data into structured, actionable intelligence with verified citations.",
     ],
   },
   {
