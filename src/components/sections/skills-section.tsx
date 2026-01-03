@@ -25,7 +25,7 @@ const skillsData = {
     icon: <Cpu className="w-6 h-6" />
   },
   mlTooling: {
-    title: "ML Tooling",
+    title: "ML and Data Tooling",
     items: ["NumPy", "Pandas", "Scikit-learn"],
     icon: <Wrench className="w-6 h-6" />
   },
