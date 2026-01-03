@@ -1,38 +1,33 @@
 
 import SectionContainer from '@/components/shared/section-container';
 import SkillCategory from '@/components/skills/skill-category';
-import { Code2, Brain, Lightbulb, Cpu, MessageSquareText, Sparkles } from 'lucide-react';
+import { Code2, Brain, Database, Cpu, Wrench, Sparkles } from 'lucide-react';
 
 const skillsData = {
-  languages: {
-    title: "Programming Languages",
-    items: ["Python", "SQL", "Joins", "Subqueries", "Window Functions", "Indexing", "Query Optimization"],
+  coreBackend: {
+    title: "Core Languages & Backend",
+    items: ["Python", "FastAPI", "REST API Design", "SQL"],
     icon: <Code2 className="w-6 h-6" />
   },
-  genAI: {
-    title: "GenAI and LLMs",
-    items: ["LangChain", "LangGraph", "Retrieval-Augmented Generation (RAG)", "Prompt Engineering", "Hugging Face", "Transformers", "LLM APIs (Google Gemini, Groq, OpenAI)", "Flask-based AI Deployment"],
+  llmsAgents: {
+    title: "LLMs & Agentic Systems",
+    items: ["Agentic Workflows (LangGraph)", "Retrieval-Augmented Generation (RAG)", "LangChain", "LLM APIs (Gemini, OpenAI, Groq)", "Prompt Engineering", "RAG Evaluation (Ragas, TruLens)"],
     icon: <Sparkles className="w-6 h-6" />
   },
-  deepLearning: {
-    title: "Deep Learning",
-    items: ["Transformer Architecture", "Encoder-Decoder Models", "Fine-Tuning", "Neural Network Architectures", "Activation Functions", "Loss Functions", "Optimization (PyTorch)"],
+  retrievalVector: {
+    title: "Retrieval & Vector Systems",
+    items: ["Sentence-Transformers", "Vector Databases (ChromaDB / pgvector)", "Embedding Models"],
+    icon: <Database className="w-6 h-6" />
+  },
+  mlDl: {
+    title: "Machine Learning & Deep Learning",
+    items: ["Supervised Learning", "Feature Engineering", "Transformer Architectures", "Fine-Tuning", "PyTorch"],
     icon: <Cpu className="w-6 h-6" />
   },
-  machineLearning: {
-    title: "Machine Learning",
-    items: ["Supervised Learning (Regression, Classification)", "Regularization (L1 & L2)", "Feature Engineering", "Model Evaluation (Cross-validation, Accuracy, Precision, Recall, F1)", "Data Preprocessing (Normalization, Standardization, Missing Data Handling)", "Probability & Statistics"],
-    icon: <Lightbulb className="w-6 h-6" />
-  },
-  nlp: {
-    title: "Natural Language Processing",
-    items: ["Sentence Transformers (Embedding Generation)", "Tokenization", "TF-IDF", "Bag of Words", "Stemming", "Lemmatization", "Text Classification", "Summarization"],
-    icon: <MessageSquareText className="w-6 h-6" />
-  },
-  frameworks: {
-    title: "Libraries/Frameworks",
-    items: ["PyTorch", "Scikit-learn", "Numpy", "Pandas (Data Cleaning)", "NLTK", "Sentence Transformers", "Flask", "FastAPI"],
-    icon: <Brain className="w-6 h-6" />
+  mlTooling: {
+    title: "ML Tooling",
+    items: ["NumPy", "Pandas", "Scikit-learn"],
+    icon: <Wrench className="w-6 h-6" />
   },
 };
 
