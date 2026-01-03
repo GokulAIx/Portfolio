@@ -10,10 +10,10 @@ const AboutSection = () => {
            <UserCircle className="w-16 h-16 text-primary" />
         </div>
         <p className="text-lg sm:text-xl text-foreground leading-relaxed mb-4">
-          My approach to AI engineering has evolved from writing code that works to thinking about systems that continue to work under real-world constraints. Through hands-on experience building production-facing AI pipelines and backend services, I’ve learned to prioritize reliability, observability, and controlled failure over one-off solutions.
+          My approach to AI engineering has evolved from writing code that works to designing systems that continue to work under real-world constraints. Through hands-on experience building production-facing AI pipelines and backend services, I’ve learned to prioritize reliability, observability, and controlled failure over one-off solutions.
         </p>
         <p className="text-lg sm:text-xl text-foreground leading-relaxed mb-4">
-          When I work on a system, I consistently think through:
+          When working on a system, I consistently think through:
         </p>
         <ul className="list-disc list-inside text-lg sm:text-xl text-foreground leading-relaxed mb-4 space-y-2">
             <li>What is the most likely way this can fail?</li>
@@ -21,7 +21,7 @@ const AboutSection = () => {
             <li>What is the simplest rollback or recovery path?</li>
         </ul>
         <p className="text-lg sm:text-xl text-foreground leading-relaxed">
-          My current work spans AI-driven workflows, backend API development (FastAPI), and agent-based systems, with a focus on connecting machine learning components to reliable, well-structured services that can be used in real applications.
+          My current work spans agentic AI workflows, backend API development (FastAPI), and applied machine learning, with a focus on connecting ML components to reliable, well-structured services that can be used in real applications.
         </p>
       </div>
     </SectionContainer>
