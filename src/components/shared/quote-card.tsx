@@ -12,9 +12,9 @@ const QuoteCard = () => {
     >
       <div className="relative w-full flex-grow flex flex-col items-center justify-center">
         <p className="font-code text-center text-xl sm:text-2xl leading-relaxed text-slate-100 animated-text-glow">
-          "Training Artificial Networks
+          "Building intelligent AI systems
           <br />
-          with my Biological Neural Network!"
+          with reliable backend foundations."
         </p>
       </div>
     </div>

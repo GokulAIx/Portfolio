@@ -5,8 +5,8 @@ import { BrainCircuit } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const QUOTE_LINES = [
-  "\"Training Artificial Networks",
-  "with my Biological Neural Network!\""
+  "\"Building intelligent AI systems",
+  "with reliable backend foundations.\""
 ];
 
 const TypewriterQuoteCard = () => {
