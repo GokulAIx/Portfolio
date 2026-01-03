@@ -44,7 +44,7 @@ const LandingSection = () => {
             </p>
           </div>
           <p className="text-base sm:text-lg text-muted-foreground mb-6 max-w-md">
-            The Mind Behind The Model.
+            From models to real-world systems.
           </p>
 
           <div className="mt-8 p-6 border border-border rounded-xl shadow-xl bg-secondary/50 max-w-md w-full mx-auto md:ml-0">
