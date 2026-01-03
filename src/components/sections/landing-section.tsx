@@ -40,7 +40,7 @@ const LandingSection = () => {
           </h1>
           <div className="flex flex-col items-center md:items-start mb-4">
             <p className="flex items-center gap-2 text-lg sm:text-xl text-primary">
-              <span>⚡ ML/NLP Engineer in Progress</span>
+              <span>AI Engineer | Specialized in Agentic Workflows & Production RAG.</span>
             </p>
           </div>
           <p className="text-base sm:text-lg text-muted-foreground mb-6 max-w-md">
