@@ -7,7 +7,7 @@ const projectsData = [
     title: "Not-Jarvis (V1) - Stateful AI Agent Framework",
     description: "Built a stateful, multi-turn AI agent using LangGraph with an iterative single-step planning loop, executing one action per iteration with explicit completion checks. • Designed a hybrid Python + LLM architecture where Python performs deterministic URL extraction and normalization, achieving zero URL hallucination and duplicate action prevention. • Implemented persistent conversation memory (PostgreSQL checkpointer), Server-Sent Events (SSE) streaming, and schema-validated planning (Pydantic) to ensure reliable, debuggable agent execution.",
     tools: ["Python", "FastAPI", "LangGraph", "LangChain", "Gemini API", "PostgreSQL (Supabase)", "Pydantic"],
-    imageUrl: "/Not-Jarvis.jpg",
+    imageUrl: "/Not-Jarvis.png",
     imageHint: "AI agent",
     githubLink: "https://github.com/GokulAIx/Not-Jarvis",
     demoLink: "https://www.youtube.com/watch?v=1vU_-1AaM0A",
