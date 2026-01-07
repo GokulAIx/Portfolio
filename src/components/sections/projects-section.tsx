@@ -13,9 +13,9 @@ const projectsData = [
     demoLink: "https://www.youtube.com/watch?v=1vU_-1AaM0A",
   },
   {
-    title: "VidQuery – AI YouTube Video Assistant",
-    description: "Engineered a RAG-powered app with LangChain, ChromaDB, and FastAPI to process video transcripts and deliver context-aware answers. Allows users to instantly get answers from a YouTube video, and includes an interactive Streamlit UI.",
-    tools: ["LangChain", "ChromaDB", "FastAPI", "Streamlit", "Gemini Flash", "RAG"],
+    title: "VidQuery - Low-Latency RAG System for Long-Form Video QA",
+    description: "Designed and built a sub-5s latency RAG system for long-form YouTube videos, implementing URL-based transcript caching to reduce compute costs and latency for repeated queries. Implemented hybrid dense + keyword search with multi-query retrieval while enforcing strict top-k and token caps to keep LLM context small and cost-efficient.",
+    tools: ["Python", "LangChain", "Gemini", "Hugging Face", "Sentence-Transformers", "ChromaDB"],
     imageUrl: "/VidQuery.jpg",
     imageHint: "video query",
     githubLink: "https://github.com/GokulAIx/VidQuery",
