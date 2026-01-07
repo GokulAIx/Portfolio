@@ -21,6 +21,16 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, imageUrl, imageHint, githubLink, demoLink, linkedinLink }) => {
   const isVidQuery = title === 'VidQuery – AI YouTube Video Assistant';
 
+  const getDemoButtonText = () => {
+    if (title === 'Blaze - AI Web Page Summarizer and ChatBot - Chrome Extension') {
+      return 'Demo Video on Linkedin';
+    }
+    if (title === 'Not-Jarvis (V1) - Stateful AI Agent Framework') {
+        return 'Demo Video on Youtube';
+    }
+    return 'Live Demo';
+  };
+
   return (
     <Card className={cn(
       "group flex flex-col h-full overflow-hidden shadow-lg hover:scale-105 transition-all duration-300 project-card-animated-dark-energy-hover"
@@ -59,7 +69,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
             <Button variant="default" size="sm" asChild className="w-full">
               <Link href={demoLink} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="mr-2 h-4 w-4" />
-                {title === 'Blaze - AI Web Page Summarizer and ChatBot - Chrome Extension' ? 'Demo Video on Linkedin' : 'Live Demo'}
+                {getDemoButtonText()}
               </Link>
             </Button>
           )}
