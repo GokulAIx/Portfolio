@@ -16,7 +16,7 @@ const projectsData = [
     title: "VidQuery - Low-Latency RAG System for Long-Form Video QA",
     description: "Designed and built a sub-5s latency RAG system for long-form YouTube videos, implementing URL-based transcript caching to reduce compute costs and latency for repeated queries. Implemented hybrid dense + keyword search with multi-query retrieval while enforcing strict top-k and token caps to keep LLM context small and cost-efficient.",
     tools: ["Python", "LangChain", "Gemini", "Hugging Face", "Sentence-Transformers", "ChromaDB"],
-    imageUrl: "/Vidquery.jpg",
+    imageUrl: "/VidQuery.jpg",
     imageHint: "video query",
     githubLink: "https://github.com/GokulAIx/VidQuery",
     demoLink: "https://gokulaix-vidquery.streamlit.app/",
