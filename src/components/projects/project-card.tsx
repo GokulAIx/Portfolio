@@ -26,7 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
       return 'Demo Video on Linkedin';
     }
     if (title === 'Not-Jarvis (V1) - Stateful AI Agent Framework' || title === 'VidQuery - Low-Latency RAG System for Long-Form Video QA') {
-        return 'Demo Video on Youtube';
+        return 'Demo Video';
     }
     return 'Live Demo';
   };
