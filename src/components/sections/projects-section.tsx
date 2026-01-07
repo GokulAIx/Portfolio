@@ -13,15 +13,6 @@ const projectsData = [
     demoLink: "https://www.youtube.com/watch?v=1vU_-1AaM0A",
   },
   {
-    title: "Blaze - AI Web Page Summarizer and ChatBot - Chrome Extension",
-    description: "A multi-functional AI browser extension providing instant summarization and enabling users to ask in-depth questions about any webpage’s content. This tool leverages a custom-built RAG pipeline and a Python/Flask API to deliver precise, AI-driven insights directly in the browser. Implemented Map-Reduce for efficient Web-Page summarization, and ChromaDB for Vector Store.",
-    tools: ["Python", "LangChain", "Google Gemini", "Hugging Face", "ChromaDB", "JavaScript"],
-    imageUrl: "/Blaze V2.jpg",
-    imageHint: "web summarizer",
-    demoLink: "https://www.linkedin.com/feed/update/urn:li:activity:7371006942615580672/",
-    githubLink: "https://github.com/GokulAIx/Blaze",
-  },
-  {
     title: "VidQuery – AI YouTube Video Assistant",
     description: "Engineered a RAG-powered app with LangChain, ChromaDB, and FastAPI to process video transcripts and deliver context-aware answers. Allows users to instantly get answers from a YouTube video, and includes an interactive Streamlit UI.",
     tools: ["LangChain", "ChromaDB", "FastAPI", "Streamlit", "Gemini Flash", "RAG"],
@@ -30,6 +21,15 @@ const projectsData = [
     githubLink: "https://github.com/GokulAIx/VidQuery",
     demoLink: "https://gokulaix-vidquery.streamlit.app/",
     linkedinLink: "https://www.linkedin.com/feed/update/urn:li:activity:7365933549864091649/",
+  },
+  {
+    title: "Blaze - AI Web Page Summarizer and ChatBot - Chrome Extension",
+    description: "A multi-functional AI browser extension providing instant summarization and enabling users to ask in-depth questions about any webpage’s content. This tool leverages a custom-built RAG pipeline and a Python/Flask API to deliver precise, AI-driven insights directly in the browser. Implemented Map-Reduce for efficient Web-Page summarization, and ChromaDB for Vector Store.",
+    tools: ["Python", "LangChain", "Google Gemini", "Hugging Face", "ChromaDB", "JavaScript"],
+    imageUrl: "/Blaze V2.jpg",
+    imageHint: "web summarizer",
+    demoLink: "https://www.linkedin.com/feed/update/urn:li:activity:7371006942615580672/",
+    githubLink: "https://github.com/GokulAIx/Blaze",
   },
   {
     title: "Sentiment Analysis on IMDB Dataset",
