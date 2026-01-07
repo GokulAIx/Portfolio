@@ -19,7 +19,7 @@ const projectsData = [
     imageUrl: "/VidQuery.jpg",
     imageHint: "video query",
     githubLink: "https://github.com/GokulAIx/VidQuery",
-    demoLink: "https://gokulaix-vidquery.streamlit.app/",
+    demoLink: "https://youtu.be/e6TZ7XHZ3ek",
     linkedinLink: "https://www.linkedin.com/feed/update/urn:li:activity:7365933549864091649/",
   },
   {

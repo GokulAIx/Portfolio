@@ -25,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
     if (title === 'Blaze - AI Web Page Summarizer and ChatBot - Chrome Extension') {
       return 'Demo Video on Linkedin';
     }
-    if (title === 'Not-Jarvis (V1) - Stateful AI Agent Framework') {
+    if (title === 'Not-Jarvis (V1) - Stateful AI Agent Framework' || title === 'VidQuery - Low-Latency RAG System for Long-Form Video QA') {
         return 'Demo Video on Youtube';
     }
     return 'Live Demo';
