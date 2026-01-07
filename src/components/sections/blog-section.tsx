@@ -15,7 +15,7 @@ const BlogSection = () => {
             I write about Machine Learning, AI, and the projects I'm working on. Check out my articles on Medium.
           </p>
           <Button asChild size="lg" className="btn-spacey">
-            <Link href="https://medium.com/@gokulaix.dev" target="_blank" rel="noopener noreferrer">
+            <Link href="https://medium.com/@gokulaix" target="_blank" rel="noopener noreferrer">
               <BookOpen className="mr-2 h-5 w-5" />
               Read on Medium
             </Link>
