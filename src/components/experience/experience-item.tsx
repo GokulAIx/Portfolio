@@ -21,7 +21,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ title, company, duratio
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <ul className="list-disc list-inside space-y-1 text-sm text-foreground">
+        <ul className="list-disc list-inside space-y-2 text-sm text-foreground leading-relaxed">
           {responsibilities.map((resp, index) => (
             <li key={index}>{resp}</li>
           ))}
