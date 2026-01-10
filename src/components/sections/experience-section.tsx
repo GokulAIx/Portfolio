@@ -21,7 +21,7 @@ const experienceData = [
     responsibilities: [
       "Developed 3+ tech projects, including Prof Connect, enabling streamlined networking for 1,500+ students and teachers.",
       "Automated data scraping from 5 sources for the off-campus placements page, utilizing APIs, and improved access rate by 30%.",
-      "Led a team to deliver technical solutions and organized events, focusing on user engagement and community building.",
+      "Led a 10-member team to deliver technical solutions and organized events, focusing on user engagement and community building.",
     ],
   },
 ];
