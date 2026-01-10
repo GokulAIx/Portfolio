@@ -8,11 +8,10 @@ const experienceData = [
     company: "Fidura AI (Remote, India)",
     duration: "October 2025 – Present",
     responsibilities: [
-      "Developed a production-grade RAG system to extract 19 structured fields from tender PDFs, combining hybrid retrieval (sentence-transformers + pgvector keyword boosting), robust Docling/PyMuPDF ingestion, and bounded-concurrency LLM extraction with page-level provenance.",
-      "Engineered 1 AI agent orchestrator using LangGraph to automate complex quantitative workflows, from research to simulated execution.",
-      "Generated 5+ backend REST APIs (FastAPI) that allow the agent to connect to and control the financial tools.",
-      "Integrated 4+ custom financial tools for strategy backtesting, simulated order placement, and calculating hedge ratios for risk management.",
-      "Developed a Multi-Step Reasoning Agent that acts as a global supply chain analyst. Built on LangGraph, the system orchestrates autonomous search workflows to cross-reference commodity prices with live port congestion and regulatory news, transforming raw data into structured, actionable intelligence with verified citations.",
+      "Designed and owned a production-grade RAG extraction pipeline converting tender PDFs into 19 schema-validated fields, using hybrid retrieval (sentence-transformers + pgvector), Docling/PyMuPDF ingestion, bounded-concurrency LLM execution, and page-level provenance for traceability.",
+      "Built an agent-orchestrated supply-chain knowledge graph system that dynamically constructs end-to-end origin-to-destination networks (producers, processors, logistics, regulators, distributors), provides source-backed news summaries per node, an aggregated graph-level supply-chain health report with drill-down capability, and supports natural-language querying across the entire supply chain.",
+      "Architected and implemented a LangGraph-based agent orchestration system to automate quantitative workflows from research to simulated execution.",
+      "Built and maintained 5+ FastAPI services exposing AI agents and financial tools as external APIs, handling request validation, concurrency, and downstream integrations.",
     ],
   },
   {
