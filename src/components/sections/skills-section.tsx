@@ -1,7 +1,6 @@
-
 import SectionContainer from '@/components/shared/section-container';
 import SkillCategory from '@/components/skills/skill-category';
-import { Code2, Brain, Database, Cpu, Wrench, Sparkles } from 'lucide-react';
+import { Code2, Database, Cpu, Wrench, Sparkles, Server } from 'lucide-react';
 
 const skillsData = {
   coreBackend: {
@@ -28,6 +27,11 @@ const skillsData = {
     title: "ML and Data Tooling",
     items: ["NumPy", "Pandas", "Scikit-learn"],
     icon: <Wrench className="w-6 h-6" />
+  },
+  infraDeployment: {
+    title: "Infrastructure & Deployment",
+    items: ["Docker", "AWS", "pgvector", "PostgreSQL", "API Design", "Observability"],
+    icon: <Server className="w-6 h-6" />
   },
 };
 
