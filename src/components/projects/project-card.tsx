@@ -1,10 +1,11 @@
+'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Github, ExternalLink, Linkedin } from 'lucide-react';
+import { Github, ExternalLink, Linkedin, Package } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ProjectCardProps {
@@ -15,18 +16,23 @@ interface ProjectCardProps {
   imageHint: string;
   githubLink?: string;
   demoLink?: string;
-  linkedinLink?: string; // New property for the special case
+  linkedinLink?: string;
+  pypiLink?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, imageUrl, imageHint, githubLink, demoLink, linkedinLink }) => {
-  const isVidQuery = title === 'VidQuery – AI YouTube Video Assistant';
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, imageUrl, imageHint, githubLink, demoLink, linkedinLink, pypiLink }) => {
+  const isVidQuery = title.includes('VidQuery');
 
   const getDemoButtonText = () => {
-    if (title === 'Blaze - AI Web Page Summarizer and ChatBot - Chrome Extension') {
-      return 'Demo Video on Linkedin';
-    }
-    if (title === 'Not-Jarvis (V1) - Stateful AI Agent Framework' || title === 'VidQuery - Low-Latency RAG System for Long-Form Video QA') {
-        return 'Demo Video';
+    const videoTitles = [
+      'Not-Jarvis',
+      'VidQuery',
+      'Blaze',
+      'Agent Breaker'
+    ];
+    
+    if (videoTitles.some(t => title.includes(t))) {
+      return 'Demo Video';
     }
     return 'Live Demo';
   };
@@ -74,36 +80,31 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
             </Button>
           )}
 
-          {isVidQuery ? (
-            // Special layout for VidQuery: side-by-side buttons
-            <div className="flex gap-2 w-full">
-              {githubLink && (
-                <Button variant="outline" size="sm" asChild className="w-full">
-                  <Link href={githubLink} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" /> GitHub
-                  </Link>
-                </Button>
-              )}
-              {linkedinLink && (
-                <Button variant="outline" size="sm" asChild className="w-full btn-spacey">
-                  <Link href={linkedinLink} target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="mr-2 h-4 w-4" /> Linkedin Demo
-                  </Link>
-                </Button>
-              )}
-            </div>
-          ) : (
-            // Default layout for other projects
-            <>
-              {githubLink && (
-                <Button variant="outline" size="sm" asChild className="w-full">
-                  <Link href={githubLink} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" /> GitHub
-                  </Link>
-                </Button>
-              )}
-            </>
-          )}
+          <div className="flex gap-2 w-full">
+            {githubLink && (
+              <Button variant="outline" size="sm" asChild className="flex-1">
+                <Link href={githubLink} target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-4 w-4" /> GitHub
+                </Link>
+              </Button>
+            )}
+            
+            {pypiLink && (
+              <Button variant="outline" size="sm" asChild className="flex-1">
+                <Link href={pypiLink} target="_blank" rel="noopener noreferrer">
+                  <Package className="mr-2 h-4 w-4" /> PyPI
+                </Link>
+              </Button>
+            )}
+
+            {isVidQuery && linkedinLink && (
+              <Button variant="outline" size="sm" asChild className="flex-1 btn-spacey">
+                <Link href={linkedinLink} target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
+                </Link>
+              </Button>
+            )}
+          </div>
         </div>
       </CardFooter>
     </Card>

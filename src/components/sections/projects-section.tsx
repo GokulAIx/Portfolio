@@ -1,12 +1,21 @@
-
 import SectionContainer from '@/components/shared/section-container';
 import ProjectCard from '@/components/projects/project-card';
 
 const projectsData = [
   {
+    title: "Agent Breaker – Adversarial Testing Framework for AI Agents - PyPI Package",
+    description: "Built a Chaos Monkey-style adversarial testing framework that automatically probes AI agents for prompt-injection and goal-hijacking vulnerabilities using domain-aware attack generation. • Implemented runtime agent introspection to auto-detect tools and capabilities, enabling targeted attack payload generation and plug-and-play testing for LangGraph applications. • Designed a behavioral evaluation engine with negation-aware rule analysis and CLI reporting to identify security failures such as data leakage, role acceptance, and unauthorized actions.",
+    tools: ["Python", "Pydantic", "Typer CLI", "PyPI", "Security"],
+    imageUrl: "https://picsum.photos/seed/agentbreaker/800/600",
+    imageHint: "security testing",
+    githubLink: "https://github.com/GokulAIx/Agent-Breaker",
+    demoLink: "https://www.youtube.com/watch?v=UKaW80ka2Ws",
+    pypiLink: "https://pypi.org/project/agent-breaker/",
+  },
+  {
     title: "Not-Jarvis (V1) - Stateful AI Agent Framework",
     description: "Built a stateful, multi-turn AI agent using LangGraph with an iterative single-step planning loop, executing one action per iteration with explicit completion checks. • Designed a hybrid Python + LLM architecture where Python performs deterministic URL extraction and normalization, achieving zero URL hallucination and duplicate action prevention. • Implemented persistent conversation memory (PostgreSQL checkpointer), Server-Sent Events (SSE) streaming, and schema-validated planning (Pydantic) to ensure reliable, debuggable agent execution.",
-    tools: ["Python", "FastAPI", "LangGraph", "LangChain", "Gemini API", "PostgreSQL (Supabase)", "Pydantic"],
+    tools: ["Python", "FastAPI", "LangGraph", "LangChain", "Gemini API", "PostgreSQL", "Pydantic"],
     imageUrl: "/Not-Jarvis.png",
     imageHint: "AI agent",
     githubLink: "https://github.com/GokulAIx/Not-Jarvis",
@@ -54,9 +63,9 @@ const ProjectsSection = () => {
   return (
     <SectionContainer id="projects" title="My Projects">
       <div className="border border-border rounded-lg p-4 md:p-6 overflow-x-auto shadow-inner bg-card/50">
-        <div className="flex flex-nowrap gap-6 lg:gap-8 py-2"> {/* Added py-2 for a little vertical padding for scrollbar */}
+        <div className="flex flex-nowrap gap-6 lg:gap-8 py-2">
           {projectsData.map((project) => (
-            <div key={project.title} className="flex-shrink-0 w-80 md:w-96"> {/* Wrapper for fixed width */}
+            <div key={project.title} className="flex-shrink-0 w-80 md:w-96">
               <ProjectCard {...project} />
             </div>
           ))}
