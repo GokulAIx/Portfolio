@@ -6,7 +6,7 @@ const projectsData = [
     title: "Agent Breaker – Adversarial Testing Framework for AI Agents - PyPI Package",
     description: "Built a Chaos Monkey-style adversarial testing framework that automatically probes AI agents for prompt-injection and goal-hijacking vulnerabilities using domain-aware attack generation. • Implemented runtime agent introspection to auto-detect tools and capabilities, enabling targeted attack payload generation and plug-and-play testing for LangGraph applications. • Designed a behavioral evaluation engine with negation-aware rule analysis and CLI reporting to identify security failures such as data leakage, role acceptance, and unauthorized actions.",
     tools: ["Python", "Pydantic", "Typer CLI", "PyPI", "Security"],
-    imageUrl: "https://picsum.photos/seed/agentbreaker/800/600",
+    imageUrl: "/AgentBreaker.png",
     imageHint: "security testing",
     githubLink: "https://github.com/GokulAIx/Agent-Breaker",
     demoLink: "https://www.youtube.com/watch?v=UKaW80ka2Ws",
