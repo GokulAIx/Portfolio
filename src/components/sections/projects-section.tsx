@@ -4,7 +4,7 @@ import ProjectCard from '@/components/projects/project-card';
 const projectsData = [
   {
     title: "Agent Breaker – Adversarial Testing Framework for AI Agents - PyPI Package",
-    description: "Built a Chaos Monkey-style adversarial testing framework that automatically probes AI agents for prompt-injection and goal-hijacking vulnerabilities using domain-aware attack generation. • Implemented runtime agent introspection to auto-detect tools and capabilities, enabling targeted attack payload generation and plug-and-play testing for LangGraph applications. • Designed a behavioral evaluation engine with negation-aware rule analysis and CLI reporting to identify security failures such as data leakage, role acceptance, and unauthorized actions.",
+    description: "Built a Chaos Monkey-style adversarial testing framework that automatically probes AI agents for prompt-injection and goal-hijacking vulnerabilities using domain-aware attack generation.\n\n• Implemented runtime agent introspection to auto-detect tools and capabilities, enabling targeted attack payload generation and plug-and-play testing for LangGraph applications.\n\n• Designed a behavioral evaluation engine with negation-aware rule analysis and CLI reporting to identify security failures such as data leakage, role acceptance, and unauthorized actions.",
     tools: ["Python", "Pydantic", "Typer CLI", "PyPI", "Security"],
     imageUrl: "/AgentBreaker.png",
     imageHint: "security testing",
@@ -14,7 +14,7 @@ const projectsData = [
   },
   {
     title: "Not-Jarvis - Stateful AI Agent Framework",
-    description: "Built a stateful, multi-turn AI agent using LangGraph with an iterative single-step planning loop, executing one action per iteration with explicit completion checks. • Designed a hybrid Python + LLM architecture where Python performs deterministic URL extraction and normalization, achieving zero URL hallucination and duplicate action prevention. • Implemented persistent conversation memory (PostgreSQL checkpointer), Server-Sent Events (SSE) streaming, and schema-validated planning (Pydantic) to ensure reliable, debuggable agent execution.",
+    description: "Built a stateful, multi-turn AI agent using LangGraph with an iterative single-step planning loop, executing one action per iteration with explicit completion checks.\n\n• Designed a hybrid Python + LLM architecture where Python performs deterministic URL extraction and normalization, achieving zero URL hallucination and duplicate action prevention.\n\n• Implemented persistent conversation memory (PostgreSQL checkpointer), Server-Sent Events (SSE) streaming, and schema-validated planning (Pydantic) to ensure reliable, debuggable agent execution.",
     tools: ["Python", "FastAPI", "LangGraph", "LangChain", "Gemini API", "PostgreSQL", "Pydantic"],
     imageUrl: "/Not-Jarvis.png",
     imageHint: "AI agent",
@@ -23,7 +23,7 @@ const projectsData = [
   },
   {
     title: "VidQuery - Low-Latency RAG System for Long-Form Video QA",
-    description: "Designed and built a sub-5s latency RAG system for long-form YouTube videos, implementing URL-based transcript caching to reduce compute costs and latency for repeated queries. Implemented hybrid dense + keyword search with multi-query retrieval while enforcing strict top-k and token caps to keep LLM context small and cost-efficient.",
+    description: "Designed and built a sub-5s latency RAG system for long-form YouTube videos, implementing URL-based transcript caching to reduce compute costs and latency for repeated queries.\n\nImplemented hybrid dense + keyword search with multi-query retrieval while enforcing strict top-k and token caps to keep LLM context small and cost-efficient.",
     tools: ["Python", "LangChain", "Gemini", "Hugging Face", "Sentence-Transformers", "ChromaDB"],
     imageUrl: "/VidQuery.jpg",
     imageHint: "video query",
@@ -33,7 +33,7 @@ const projectsData = [
   },
   {
     title: "Blaze - AI Web Page Summarizer and ChatBot - Chrome Extension",
-    description: "A multi-functional AI browser extension providing instant summarization and enabling users to ask in-depth questions about any webpage’s content. This tool leverages a custom-built RAG pipeline and a Python/Flask API to deliver precise, AI-driven insights directly in the browser. Implemented Map-Reduce for efficient Web-Page summarization, and ChromaDB for Vector Store.",
+    description: "A multi-functional AI browser extension providing instant summarization and enabling users to ask in-depth questions about any webpage’s content. \n\nThis tool leverages a custom-built RAG pipeline and a Python/Flask API to deliver precise, AI-driven insights directly in the browser. Implemented Map-Reduce for efficient Web-Page summarization, and ChromaDB for Vector Store.",
     tools: ["Python", "LangChain", "Google Gemini", "Hugging Face", "ChromaDB", "JavaScript"],
     imageUrl: "/Blaze V2.jpg",
     imageHint: "web summarizer",

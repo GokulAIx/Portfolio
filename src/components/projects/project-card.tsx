@@ -52,8 +52,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tools, im
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <CardTitle className="text-xl font-semibold font-headline">{title}</CardTitle>
-        <CardDescription className="text-sm text-muted-foreground min-h-[3rem] rounded-md p-1 -m-1 transition-all duration-300 group-hover:ring-2 group-hover:ring-[hsl(var(--highlight-yellow)/0.6)]">
+        <CardTitle className="text-xl font-semibold font-headline mb-2">{title}</CardTitle>
+        <CardDescription className="text-sm text-muted-foreground rounded-md p-1 -m-1 transition-all duration-300 group-hover:ring-2 group-hover:ring-[hsl(var(--highlight-yellow)/0.6)] whitespace-pre-line leading-relaxed">
           {description}
         </CardDescription>
       </CardHeader>
