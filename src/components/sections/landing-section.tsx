@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Github, Linkedin, Mail } from 'lucide-react';
@@ -40,7 +39,7 @@ const LandingSection = () => {
           </h1>
           <div className="flex flex-col items-center md:items-start mb-4">
             <p className="flex items-center gap-2 text-lg sm:text-xl text-primary">
-              <span>AI Engineer | Agentic Systems, Backend APIs, and Applied ML</span>
+              <span>AI Systems Engineer | Agentic Workflows, RAG Infrastructure, Backend APIs</span>
             </p>
           </div>
           <p className="text-base sm:text-lg text-muted-foreground mb-6 max-w-md">
