@@ -27,7 +27,7 @@ const LandingSection = () => {
             <Image
               src="/Profile-pic.png"
               alt="P Gokul Sree Chandra - AI Systems Engineer and Machine Learning Specialist (@GokulAIx)"
-              title="P Gokul Sree Chandra - AI Engineer"
+              title="P Gokul Sree Chandra - AI Systems Engineer"
               fill={true}
               style={{ objectFit: 'cover' }}
               data-ai-hint="profile photo"
@@ -40,7 +40,7 @@ const LandingSection = () => {
           </h1>
           <div className="flex flex-col items-center md:items-start mb-4">
             <p className="flex items-center gap-2 text-lg sm:text-xl text-primary font-medium">
-              <span>AI Engineer | Agentic Systems, Backend APIs, and Applied ML</span>
+              <span>AI Systems Engineer | Agentic Workflows, RAG Infrastructure, and Backend APIs</span>
             </p>
           </div>
           <p className="text-base sm:text-lg text-muted-foreground mb-6 max-w-md">

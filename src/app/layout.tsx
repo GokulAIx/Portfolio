@@ -10,14 +10,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'P Gokul Sree Chandra | AI Systems Engineer from India | GokulAIx',
-  description: 'Portfolio of P Gokul Sree Chandra (@GokulAIx), a leading AI Systems Engineer and Machine Learning Engineer from India. Specialist in Agentic Workflows, RAG Infrastructure, and Backend APIs.',
+  description: 'Official portfolio of P Gokul Sree Chandra (@GokulAIx), an expert AI Systems Engineer and Machine Learning Engineer specializing in Agentic Workflows, RAG Infrastructure, and Backend APIs.',
   keywords: [
     'P Gokul Sree Chandra',
     'GokulAIx',
     'Gokul AI',
-    'AI engineer from India',
     'AI Systems Engineer',
     'Machine Learning Engineer',
+    'AI Engineer India',
     'Generative AI Engineer',
     'Backend Engineer',
     'Python Developer',
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://gokulsreechandra.dev',
     title: 'P Gokul Sree Chandra | AI Systems Engineer | GokulAIx',
-    description: 'Expert AI Engineer from India specializing in building reliable, production-grade AI systems, Agentic workflows, and RAG pipelines.',
+    description: 'Expert AI Systems Engineer from India specializing in building reliable, production-grade AI systems, Agentic workflows, and RAG pipelines.',
     siteName: 'Gokul Sree Chandra Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'P Gokul Sree Chandra | AI Systems Engineer | @GokulAIx',
-    description: 'AI Engineer from India | Agentic Workflows, RAG Infrastructure, Backend APIs',
+    description: 'Expert AI Systems Engineer specializing in Agentic Workflows, RAG Infrastructure, and Backend APIs.',
     creator: '@GokulAIx',
   },
   robots: {
