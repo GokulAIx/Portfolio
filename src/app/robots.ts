@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://gokulsreechandra.dev/sitemap.xml',
+    sitemap: 'https://gokulaix.vercel.app/sitemap.xml',
   };
 }

@@ -29,14 +29,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'P Gokul Sree Chandra' }],
   creator: 'P Gokul Sree Chandra',
-  metadataBase: new URL('https://gokulsreechandra.dev'),
+  metadataBase: new URL('https://gokulaix.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://gokulsreechandra.dev',
+    url: 'https://gokulaix.vercel.app',
     title: 'P Gokul Sree Chandra | AI Systems Engineer | GokulAIx',
     description: 'Expert AI Systems Engineer from India specializing in building reliable, production-grade AI systems, Agentic workflows, and RAG pipelines.',
     siteName: 'Gokul Sree Chandra Portfolio',
