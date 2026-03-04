@@ -22,7 +22,7 @@ const StructuredData = () => {
       "https://x.com/GokulAIx",
       "https://medium.com/@gokulaix"
     ],
-    "description": "P Gokul Sree Chandra is an AI Engineer from India specializing in Agentic Systems, Machine Learning, and Backend API development.",
+    "description": "P Gokul Sree Chandra is an AI Systems Engineer from India specializing in Agentic Workflows, Machine Learning, and Backend API development.",
     "knowsAbout": [
       "Artificial Intelligence",
       "Agentic Workflows",
@@ -32,7 +32,12 @@ const StructuredData = () => {
       "Generative AI",
       "Python",
       "FastAPI",
-      "LangGraph"
+      "LangGraph",
+      "LangChain",
+      "PyTorch",
+      "RAG Infrastructure",
+      "Vector Databases",
+      "Large Language Models"
     ]
   };
 

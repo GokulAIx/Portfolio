@@ -26,7 +26,8 @@ const LandingSection = () => {
           <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-lg mb-6 border-4 border-primary/50">
             <Image
               src="/Profile-pic.png"
-              alt="P Gokul Sree Chandra - AI Engineer"
+              alt="P Gokul Sree Chandra - AI Systems Engineer and Machine Learning Specialist (@GokulAIx)"
+              title="P Gokul Sree Chandra - AI Engineer"
               fill={true}
               style={{ objectFit: 'cover' }}
               data-ai-hint="profile photo"
@@ -43,7 +44,7 @@ const LandingSection = () => {
             </p>
           </div>
           <p className="text-base sm:text-lg text-muted-foreground mb-6 max-w-md">
-            Building reliable, production-grade AI systems from the ground up.
+            Building reliable, production-grade AI systems from the ground up. Based in India, working globally.
           </p>
 
           <div className="mt-8 p-6 border border-border rounded-xl shadow-xl bg-secondary/50 max-w-md w-full mx-auto md:ml-0">
@@ -52,22 +53,22 @@ const LandingSection = () => {
             </h3>
             <div className="flex justify-center md:justify-start gap-4">
               <Button variant="outline" size="icon" asChild>
-                <Link href="https://github.com/GokulAIx" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile of GokulAIx">
+                <Link href="https://github.com/GokulAIx" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile of GokulAIx" title="GokulAIx on GitHub">
                   <Github className="h-7 w-7" />
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <Link href="https://www.linkedin.com/in/gokulsreechandra/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile of P Gokul Sree Chandra">
+                <Link href="https://www.linkedin.com/in/gokulsreechandra/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile of P Gokul Sree Chandra" title="P Gokul Sree Chandra on LinkedIn">
                   <Linkedin className="h-7 w-7 text-blue-600 dark:text-blue-500" />
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <Link href="https://x.com/GokulAIx" target="_blank" rel="noopener noreferrer" aria-label="X Twitter Profile of GokulAIx">
+                <Link href="https://x.com/GokulAIx" target="_blank" rel="noopener noreferrer" aria-label="X Twitter Profile of GokulAIx" title="GokulAIx on X">
                   <XIcon className="h-7 w-7" />
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <Link href="mailto:polavarapugokul@gmail.com" aria-label="Email P Gokul Sree Chandra">
+                <Link href="mailto:polavarapugokul@gmail.com" aria-label="Email P Gokul Sree Chandra" title="Email Gokul Sree Chandra">
                   <Mail className="h-7 w-7" />
                 </Link>
               </Button>

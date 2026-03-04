@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'P Gokul Sree Chandra | AI Engineer from India | GokulAIx',
+  title: 'P Gokul Sree Chandra | AI Systems Engineer from India | GokulAIx',
   description: 'Portfolio of P Gokul Sree Chandra (@GokulAIx), a leading AI Systems Engineer and Machine Learning Engineer from India. Specialist in Agentic Workflows, RAG Infrastructure, and Backend APIs.',
   keywords: [
     'P Gokul Sree Chandra',
@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'P Gokul Sree Chandra' }],
   creator: 'P Gokul Sree Chandra',
+  metadataBase: new URL('https://gokulsreechandra.dev'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
