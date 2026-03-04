@@ -5,23 +5,34 @@ const StructuredData = () => {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "P Gokul Sree Chandra",
+    "alternateName": "GokulAIx",
     "url": "https://gokulsreechandra.dev",
     "jobTitle": "AI Systems Engineer",
-    "alumniOf": "GITAM University",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "India"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "GITAM University"
+    },
     "sameAs": [
       "https://github.com/GokulAIx",
       "https://www.linkedin.com/in/gokulsreechandra/",
       "https://x.com/GokulAIx",
       "https://medium.com/@gokulaix"
     ],
+    "description": "P Gokul Sree Chandra is an AI Engineer from India specializing in Agentic Systems, Machine Learning, and Backend API development.",
     "knowsAbout": [
       "Artificial Intelligence",
       "Agentic Workflows",
       "Retrieval-Augmented Generation",
       "Backend API Development",
       "Machine Learning",
+      "Generative AI",
       "Python",
-      "FastAPI"
+      "FastAPI",
+      "LangGraph"
     ]
   };
 
