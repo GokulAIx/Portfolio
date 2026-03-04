@@ -43,10 +43,7 @@ const LandingSection = () => {
               <span>AI Systems Engineer | Agentic Workflows, RAG Infrastructure, and Backend APIs</span>
             </p>
           </div>
-          <p className="text-base sm:text-lg text-muted-foreground mb-6 max-w-md">
-            Building reliable, production-grade AI systems from the ground up. Based in India, working globally.
-          </p>
-
+          
           <div className="mt-8 p-6 border border-border rounded-xl shadow-xl bg-secondary/50 max-w-md w-full mx-auto md:ml-0">
             <h3 className="text-2xl font-semibold mb-6 text-center md:text-left text-foreground">
               Connect With Me
