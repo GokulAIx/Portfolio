@@ -1,4 +1,3 @@
-
 import Navbar from '@/components/layout/navbar';
 import Footer from '@/components/layout/footer';
 import LandingSection from '@/components/sections/landing-section';
