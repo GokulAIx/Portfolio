@@ -5,6 +5,7 @@ import { BookMarked } from 'lucide-react';
 import Link from 'next/link';
 
 const certifications = [
+  { name: "Building with the Claude API (MCPs, Agents, Prompt Evaluations)", issuerLogo: "Anthropic" },
   { name: "Fine-Tuning Language Models with Hugging Face", issuerLogo: "Hugging Face", link: "/FineTuning.jpg" },
   { name: "Introduction To Fine-Tuning - The LLM Course", issuerLogo: "Hugging Face", link: "/HuggingFace.jpg" },
   { name: "Introduction to Transformer-Based Natural Language Processing", issuerLogo: "Nvidia", link: "/Nvidia.pdf" },
@@ -22,7 +23,7 @@ const CertificationsSection = () => {
           <ul className="space-y-4">
             {certifications.map((cert, index) => (
               <li key={index} className="flex items-center text-md">
-                <BookMarked className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
+                < BookMarked className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
                 <span>
                   <span className="font-medium">{cert.name}</span>
                   <span className="text-muted-foreground text-sm"> - {' '}
