@@ -1,11 +1,14 @@
-
 import SectionContainer from '@/components/shared/section-container';
 import { Card, CardContent } from '@/components/ui/card';
 import { BookMarked } from 'lucide-react';
 import Link from 'next/link';
 
 const certifications = [
-  { name: "Building with the Claude API (MCPs, Agents, Prompt Evaluations)", issuerLogo: "Anthropic" },
+  { 
+    name: "Building with the Claude API (MCPs, Agents, Prompt Evaluations)", 
+    issuerLogo: "Anthropic", 
+    link: "/ClaudeAPI.pdf" 
+  },
   { name: "Fine-Tuning Language Models with Hugging Face", issuerLogo: "Hugging Face", link: "/FineTuning.jpg" },
   { name: "Introduction To Fine-Tuning - The LLM Course", issuerLogo: "Hugging Face", link: "/HuggingFace.jpg" },
   { name: "Introduction to Transformer-Based Natural Language Processing", issuerLogo: "Nvidia", link: "/Nvidia.pdf" },
